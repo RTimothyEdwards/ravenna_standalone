@@ -1,0 +1,21 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1555546584
+use _alphabet_2  _alphabet_2_0
+timestamp 1523029302
+transform 1 0 -64227 0 1 222993
+box 0 0 1056 1920
+use _alphabet_0  _alphabet_0_0
+timestamp 1523029302
+transform 1 0 -62957 0 1 222993
+box 0 0 1056 1920
+use _alphabet_1  _alphabet_1_1
+timestamp 1494891594
+transform 1 0 -61784 0 1 222993
+box 64 0 960 1920
+use _alphabet_9  _alphabet_9_0
+timestamp 1555546584
+transform 1 0 -60566 0 1 222966
+box 9 27 1065 1947
+<< end >>

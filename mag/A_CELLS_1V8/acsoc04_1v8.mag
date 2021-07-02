@@ -1,0 +1,72 @@
+magic
+tech EFXH018D
+timestamp 1513868641
+<< checkpaint >>
+rect -30000 -30000 36600 41000
+<< metal1 >>
+rect 0 10500 6600 11000
+rect 0 0 6600 500
+<< obsm1 >>
+rect 0 523 6600 10477
+<< metal2 >>
+rect 135 10970 165 11000
+rect 2585 10970 2615 11000
+rect 2685 10970 2715 11000
+rect 2785 10970 2815 11000
+rect 2885 10970 2915 11000
+rect 135 0 165 30
+rect 2585 0 2615 30
+rect 2685 0 2715 30
+rect 2785 0 2815 30
+rect 2885 0 2915 30
+<< obsm2 >>
+rect 0 10942 107 11000
+rect 193 10942 2557 11000
+rect 2943 10942 6600 11000
+rect 0 58 6600 10942
+rect 0 0 107 58
+rect 193 0 2557 58
+rect 2943 0 6600 58
+<< metal3 >>
+rect 0 10610 6600 11000
+rect 0 0 6600 500
+<< obsm3 >>
+rect 0 528 6600 10582
+<< labels >>
+rlabel metal2 2685 0 2715 30 6 CS1_2u
+port 1 nsew signal bidirectional
+rlabel metal2 2685 10970 2715 11000 6 CS1_2u
+port 1 nsew signal bidirectional
+rlabel metal2 135 0 165 30 6 EN
+port 2 nsew signal input
+rlabel metal2 135 10970 165 11000 6 EN
+port 2 nsew signal input
+rlabel metal3 0 10610 6600 11000 6 VDDA
+port 3 nsew power input
+rlabel metal1 0 10500 6600 11000 6 VDDA
+port 3 nsew power input
+rlabel metal3 0 0 6600 500 6 VSSA
+port 4 nsew ground input
+rlabel metal1 0 0 6600 500 6 VSSA
+port 4 nsew ground input
+rlabel metal2 2585 0 2615 30 6 CS0_1u
+port 5 nsew signal bidirectional
+rlabel metal2 2585 10970 2615 11000 6 CS0_1u
+port 5 nsew signal bidirectional
+rlabel metal2 2785 0 2815 30 6 CS2_4u
+port 6 nsew signal bidirectional
+rlabel metal2 2785 10970 2815 11000 6 CS2_4u
+port 6 nsew signal bidirectional
+rlabel metal2 2885 0 2915 30 6 CS3_8u
+port 7 nsew signal bidirectional
+rlabel metal2 2885 10970 2915 11000 6 CS3_8u
+port 7 nsew signal bidirectional
+<< properties >>
+string LEFclass CORE
+string LEFsite ana_std_18V
+string LEFview TRUE
+string LEFsymmetry X Y
+string FIXED_BBOX 0 0 6600 11000
+string GDS_FILE /ef/tech/XFAB.3/EFXH018D/libs.ref/gds/A_CELLS_1V8/acsoc04_1v8.gds
+string GDS_START 0
+<< end >>

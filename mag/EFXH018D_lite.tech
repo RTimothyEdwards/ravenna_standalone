@@ -1,0 +1,1316 @@
+#----------------------------------------------------------
+# Copyright (c) 2006-2018 R. Timothy Edwards, Bertrand Irissou
+#
+#----------------------------------------------------------
+# This file is designed to be used with magic
+# versions 8.0 or newer.
+#
+# All contents are non-proprietary.  Only DRC rules for
+# metal layers which are publicly available are represented
+# here.  This techfile cannot be used to read or write GDS.
+#----------------------------------------------------------
+tech
+  format 32
+  EFXH018D
+end
+
+version
+ version 20180921
+ description "X-Fab XH018: Lightweight non-proprietary tech"
+end
+
+
+#-----------------------------------------------------
+# Tile planes
+#-----------------------------------------------------
+
+planes
+  well,w
+  implant,i
+  mvimplant,mvi
+  active,a
+  metal1,m1
+  metal2,m2
+  metal3,m3
+  metal4,m4
+  metaltp,mtp
+  metaltpl,mtpl
+  block,b
+  comment,c
+end
+
+#-----------------------------------------------------
+# Tile types
+#-----------------------------------------------------
+
+types
+  -well nwell,nw
+  -well mvnwell,mvnw
+  -well rnw,rnwell
+  -well mvrnw,mvrnwell
+  -well obswell
+  well psub
+ -well subconn
+
+# Transistors
+ -active nmos,ntransistor,nfet
+ -active pmos,ptransistor,pfet
+ -active nnmos,nntransistor,nnfet
+ -active mvnmos,mvntransistor,mvnfet
+ -active mvpmos,mvptransistor,mvpfet
+ -active mvnnmos,mvnntransistor,mvnnfet
+# Diffusions
+ -active ndiff,ndiffusion,ndif
+ -active pdiff,pdiffusion,pdif
+ -active mvndiff,mvndiffusion,mvndif
+ -active mvpdiff,mvpdiffusion,mvpdif
+ -active ndiffc,ndcontact,ndc
+ -active pdiffc,pdcontact,pdc
+ -active mvndiffc,mvndcontact,mvndc
+ -active mvpdiffc,mvpdcontact,mvpdc
+ -active psubdiff,psubstratepdiff,ppdiff,ppd,psd
+ -active nsubdiff,nsubstratendiff,nndiff,nnd,nsd
+ -active mvpsubdiff,mvpsubstratepdiff,mvppdiff,mvppd,mvpsd
+ -active mvnsubdiff,mvnsubstratendiff,mvnndiff,mvnnd,mvnsd
+  active subdiff,subd
+  active subdiffcont,subc
+  active mvsubdiff,mvsubd
+  active mvsubdiffcont,mvsubc
+ -active psubdiffcont,psubstratepcontact,psc
+ -active nsubdiffcont,nsubstratencontact,nsc
+ -active mvpsubdiffcont,mvpsubstratepcontact,mvpsc
+ -active mvnsubdiffcont,mvnsubstratencontact,mvnsc
+ -active obsactive
+ -active mvobsactive
+ -active varactor,varact,var
+ -active mvvaractor,mvvaract,mvvar
+# Poly1
+ -active poly1,p1,polysilicon,poly,p
+ -active poly1cont,p1c,polycontact,pcontact,polycut,pc,poly1c
+ -active cappoly,capp
+# Resistors
+ -active polyresistor,presistor,pres,rp1
+ -active polysilicide,sresistor,sres,rsp1
+ -active npolyres,npres,rpp1
+ -active ppolyres,ppres,rnp1
+ -active nhighres,nhires,rnp1h
+ -active ndiffres,rnd,rdn,rndiff
+ -active pdiffres,rpd,rdp,rpdiff
+ -active mvndiffres,mvrnd,mvrdn,mvrndiff
+ -active mvpdiffres,mvrpd,mvrdp,mvrpdiff
+# Diodes
+ -active pdiode,pdi
+ -active ndiode,ndi
+ -active nndiode,nndi
+ -active pdiodec,pdic
+ -active ndiodec,ndic
+ -active nndiodec,nndic
+ -active mvpdiode,mvpdi
+ -active mvndiode,mvndi
+ -active mvnndiode,mvnndi
+ -active mvpdiodec,mvpdic
+ -active mvndiodec,mvndic
+ -active mvnndiodec,mvnndic
+
+ -active locked
+ -active locked1
+ -active locked2
+
+  metal1 metal1,m1,met1
+ -metal1 rmetal1,rm1,rmet1
+  metal1 m1hole
+  metal1 via1,m2contact,m2cut,m2c,via,v,v1
+ -metal1 obsm1
+ -metal1 padl
+
+  metal2 metal2,m2,met2
+ -metal2 rmetal2,rm2,rmet2
+  metal2 m2hole
+  metal2 via2,m3contact,m3cut,m3c,v2
+ -metal2 obsm2
+ -metal4 mimcap,mim,capm
+ -metal4 mimcapcontact,mimcapc,mimcc,capmc
+
+  metal3 metal3,m3,met3
+ -metal3 rmetal3,rm3,rmet3
+  metal3 m3hole
+  metal3 via3,v3
+ -metal3 obsm3
+
+  metal4 metal4,m4,met4
+ -metal4 rmetal4,rm4,rmet4
+  metal4 m4hole
+ -metal4 obsm4
+  metal4 viatp,vtp
+
+  metaltp metaltp,mtp,mettp
+ -metaltp rmtp,rmetaltp,rmettp
+  metaltp mtphole
+ -metaltp obsmtp
+  metaltp viatpl,vtpl
+
+  metaltpl metaltpl,mtpl,mettpl
+ -metaltpl rmtpl,rmetaltpl,rmettpl
+  metaltpl mtplhole
+ -metaltpl obsmtpl
+
+ -implant nimp
+ -implant pimp
+
+ -mvimplant thickox
+
+ -block  glass
+ -block  fillblock
+
+ -comment boundary
+ -comment comment
+ -comment obscomment
+
+end
+
+#-----------------------------------------------------
+# Magic contact types
+#-----------------------------------------------------
+
+contact
+  pc poly metal1
+  ndc ndiff metal1
+  pdc pdiff metal1
+  nsc nsd metal1
+  psc psd metal1
+  ndic ndiode metal1
+  nndic nndiode metal1
+  pdic pdiode metal1
+  subc subdiff metal1
+
+  mvndc mvndiff metal1
+  mvpdc mvpdiff metal1
+  mvnsc mvnsd metal1
+  mvpsc mvpsd metal1
+  mvndic mvndiode metal1
+  mvnndic mvnndiode metal1
+  mvpdic mvpdiode metal1
+  mvsubc mvsubdiff metal1
+
+  via1 metal1 metal2
+  via2 metal2 metal3
+  via3 metal3 metal4
+  viatp metal4 metaltp
+  viatpl metaltp metaltpl
+  mimcc mimcap metaltp
+  stackable
+
+  padl m1 m2 m3 m4 mtp glass
+  padl m1 m2 m3 m4 mtp mtpl glass
+end
+
+#-----------------------------------------------------
+# Layer aliases
+#-----------------------------------------------------
+
+aliases
+
+  allwellplane     nwell,psub,mvnwell
+  allnwelllv	   nwell,rnwell,obswell
+  allnwellmv	   mvnwell,mvrnwell
+  allnwell	   allnwelllv,allnwellmv
+  allwells         allnwell
+
+  allsubconn 	   subconn
+
+  allnfets	   nfet,mvnfet,nnfet,mvnnfet
+  allpfets	   pfet,mvpfet
+  allfets	   allnfets,allpfets,varactor,mvvaractor
+
+  allnactivenonfet *ndiff,*nsd,*ndiode,*nndiode,*mvndiff,*mvnsd,*mvndiode,*mvnndiode
+  allnactive	   allnactivenonfet,allnfets
+
+  allpactivenonfet *pdiff,*psd,*pdiode,*subdiff,*mvpdiff,*mvpsd,*mvpdiode,*mvsubdiff
+  allpactive	   allpactivenonfet,allpfets
+
+  allactivenonfet  allnactivenonfet,allpactivenonfet
+  allactive	   allactivenonfet,allfets
+
+  allactiveres	   ndiffres,pdiffres,mvndiffres,mvpdiffres
+
+  allndifflv       *ndif,*nsd,*ndiode,*nndiode,ndiffres,nfet,nnfet
+  allpdifflv       *pdif,*psd,*pdiode,pdiffres,pfet,*subdiff
+  alldifflv        allndifflv,allpdifflv
+  allndifflvnonfet *ndif,*nsd,*ndiode,*nndiode,ndiffres
+  allpdifflvnonfet *pdif,*psd,*pdiode,pdiffres
+  alldifflvnonfet  allndifflvnonfet,allpdifflvnonfet
+
+  allndiffmv       *mvndif,*mvnsd,*mvndiode,*mvnndiode,mvndiffres,mvnfet,mvnnfet
+  allpdiffmv       *mvpdif,*mvpsd,*mvpdiode,mvpdiffres,mvpfet,*mvsubdiff
+  alldiffmv        allndiffmv,allpdiffmv
+  allndiffmvnonfet *mvndif,*mvnsd,*mvndiode,*mvnndiode,mvndiffres
+  allpdiffmvnonfet *mvpdif,*mvpsd,*mvpdiode,mvpdiffres
+  alldiffmvnonfet  allndiffmvnonfet,allpdiffmvnonfet
+
+  alldiffnonfet	   alldifflvnonfet,alldiffmvnonfet
+  alldiff	   alldifflv,alldiffmv
+
+  allnactivenonhv  nfet,mvnfet,nnfet,mvnnfet,varactor,mvvaractor,*ndiff,*mvndiff,*nsd,*mvnsd,*ndiode,*nndiode,*mvndiode,*mvnndiode
+  allpactivenonhv  pfet,mvpfet,*pdiff,*mvpdiff,*psd,*mvpsd,*pdiode,*mvpdiode
+  allactivenonhv   allnactivenonhv,allpactivenonhv
+
+  allpolyres	   rp1,rsp1,rnp1,rpp1,rnp1h
+  allsblkgennocap_0_4um rp1,rnp1,rpp1,rnd,rpd,rnp1h,mvrdn,mvrdp
+
+  allpolynonfet	   *poly,cappoly,allpolyres
+  allpolynonres	   *poly,cappoly,allfets
+
+  allpoly	   allpolynonfet,allfets
+  allpolynoncap	   *poly,allfets,allpolyres
+
+  allndiffcontlv   ndc,nsc,ndic
+  allpdiffcontlv   pdc,psc,pdic,subc
+  allndiffcontmv   mvndc,mvnsc,mvndic
+  allpdiffcontmv   mvpdc,mvpsc,pdic,mvsubc
+  allndiffcont	   allndiffcontlv,allndiffcontmv
+  allpdiffcont	   allpdiffcontlv,allpdiffcontmv
+  alldiffcontlv	   allndiffcontlv,allpdiffcontlv
+  alldiffcontmv	   allndiffcontmv,allpdiffcontmv
+  alldiffcont	   alldiffcontlv,alldiffcontmv
+
+  allcont	   alldiffcont,p1c
+
+  allres	   allpolyres,allactiveres
+
+  allm1		   *m1,rm1
+  allm2		   *m2,rm2
+  allm3		   *m3,rm3
+
+  alltopm	   *mtp,rmtp
+
+  allthickm	   *mtpl,rmtpl
+
+  allm4	   	*m4,rm4,mimcap,mimcapc
+
+
+  allpad	   padl
+  
+end
+
+#-----------------------------------------------------
+# Layer drawing styles
+#-----------------------------------------------------
+
+styles
+ styletype mos
+  nwell     nwell
+  mvnwell   nwell	hvndiff_mask
+  rnwell    nwell 	ntransistor_stripes
+  mvrnwell    nwell 	ntransistor_stripes  hvndiff_mask
+  psub      pwell
+  ndiff     ndiffusion
+  pdiff     pdiffusion
+  nsd       ndiff_in_nwell
+  psd       pdiff_in_pwell
+  subdiff   pdiff_in_pwell
+  nfet      ntransistor    ntransistor_stripes
+  nnfet     ntransistor    ndiff_in_nwell
+  pfet      ptransistor    ptransistor_stripes
+  var       polysilicon    ndiff_in_nwell
+  ndc       ndiffusion     metal1  contact_X'es
+  pdc       pdiffusion     metal1  contact_X'es
+  nsc       ndiff_in_nwell metal1  contact_X'es
+  psc       pdiff_in_pwell metal1  contact_X'es
+  subc      pdiff_in_pwell metal1  contact_X'es
+  subconn   contact_X'es
+
+  mvndiff     ndiffusion     hvndiff_mask
+  mvpdiff     pdiffusion     hvpdiff_mask
+  mvnsd       ndiff_in_nwell hvndiff_mask
+  mvpsd       pdiff_in_pwell hvpdiff_mask
+  mvsubdiff   pdiff_in_pwell hvpdiff_mask
+  mvnfet      ntransistor    ntransistor_stripes hvndiff_mask
+  mvnnfet     ntransistor    ndiff_in_nwell hvndiff_mask
+  mvpfet      ptransistor    ptransistor_stripes
+  mvvar       polysilicon    ndiff_in_nwell hvndiff_mask
+  mvndc       ndiffusion     metal1  contact_X'es hvndiff_mask
+  mvpdc       pdiffusion     metal1  contact_X'es hvpdiff_mask
+  mvnsc       ndiff_in_nwell metal1  contact_X'es hvndiff_mask
+  mvpsc       pdiff_in_pwell metal1  contact_X'es hvpdiff_mask
+  mvsubc      pdiff_in_pwell metal1  contact_X'es hvpdiff_mask
+
+  poly      polysilicon 
+  cappoly   polysilicon    poly_resist_stripes
+  pc        polysilicon    metal1  contact_X'es
+  npolyres  polysilicon    silicide_block nselect2
+  ppolyres  polysilicon    silicide_block pselect2
+
+  pdiode    pdiffusion     pselect2
+  ndiode    ndiffusion     nselect2
+  nndiode   ndiff_in_nwell nselect2
+  pdiodec   pdiffusion     pselect2 metal1 contact_X'es
+  ndiodec   ndiffusion     nselect2 metal1 contact_X'es
+  nndiodec  ndiff_in_nwell nselect2 metal1 contact_X'es
+
+  mvpdiode    pdiffusion     pselect2 hvpdiff_mask
+  mvndiode    ndiffusion     nselect2 hvndiff_mask
+  mvnndiode   ndiff_in_nwell nselect2 hvndiff_mask
+  mvpdiodec   pdiffusion     pselect2 metal1 contact_X'es hvpdiff_mask
+  mvndiodec   ndiffusion     nselect2 metal1 contact_X'es hvndiff_mask
+  mvnndiodec  ndiff_in_nwell nselect2 metal1 contact_X'es hvndiff_mask
+
+  metal1    metal1
+  rm1       metal1         poly_resist_stripes
+  obsm1     metal1
+  m1hole    obsmetal1
+  m2c       metal1         metal2  via1arrow
+  metal2    metal2
+  rm2       metal2         poly_resist_stripes
+  obsm2     metal2
+  m2hole    obsmetal2
+  m3c       metal2         metal3  via2arrow
+  metal3    metal3
+  rm3       metal3         poly_resist_stripes
+  obsm3     metal3
+  m3hole    obsmetal3
+  via3      metal3         metal4  via3alt
+  metal4    metal4
+  rm4       metal4         poly_resist_stripes
+  obsm4     metal4
+  m4hole    obsmetal4
+  viatp     metal4         metal5  via4
+  metaltp   metal5
+  rmtp      metal5         poly_resist_stripes
+  obsmtp    metal5
+  viatpl    metal5         metal6  via5
+  metaltpl  metal6
+  rmtpl     metal6         poly_resist_stripes
+  obsmtpl   metal6
+  mimcap    metal4         mems
+  mimcc     metal4         contact_X'es mems
+  glass	    overglass
+  pres      poly_resist    poly_resist_stripes
+  sres      poly_resist    ndop_stripes
+  nhighres  poly_resist    silicide_block
+  ndiffres  ndiffusion	   ndop_stripes
+  pdiffres  pdiffusion	   pdop_stripes
+  mvndiffres  ndiffusion hvndiff_mask   ndop_stripes
+  mvpdiffres  pdiffusion hvpdiff_mask   pdop_stripes
+  comment   comment
+  boundary  cwell subcircuit
+  error_p   error_waffle
+  error_s   error_waffle
+  error_ps  error_waffle
+  fillblock cwell
+
+  obswell   cwell
+  obsactive implant4
+  locked    contact_X'es
+  locked1   contact_X'es
+  locked2   contact_X'es
+
+  padl      metal5 via5 overglass
+  padl      metal6 via6 overglass
+
+  thickox	implant1
+  nimp		ndop_stripes
+  pimp		pdop_stripes
+
+  magnet    substrate_field_implant
+  rotate    via3alt
+  fence     via5
+end
+
+#-----------------------------------------------------
+# Special paint/erase rules
+#-----------------------------------------------------
+
+compose
+  compose  nfet  poly  ndiff
+  compose  pfet  poly  pdiff
+  compose  var   poly  nsd
+
+  compose  mvnfet  poly  mvndiff
+  compose  mvpfet  poly  mvpdiff
+  compose  var     poly  mvnsd
+  
+  paint  mimcap  m4     mimcap
+  paint  mimcapc m4     mimcapc
+  paint  ndc     nwell  pdc
+  paint  nfet    nwell  pfet
+  paint  ndiff   nwell  pdiff
+  paint  psd     nwell  nsd
+  paint  psc     nwell  nsc
+  paint  pdc     psub   ndc
+  paint  pfet    psub   nfet
+  paint  pdiff   psub   ndiff
+  paint  nsd     psub   psd
+  paint  nsc     psub   psc
+
+  paint  mvndc     mvnwell  mvpdc
+  paint  mvnfet    mvnwell  mvpfet
+  paint  mvndiff   mvnwell  mvpdiff
+  paint  mvpsd     mvnwell  mvnsd
+  paint  mvpsc     mvnwell  mvnsc
+  paint  mvpdc     psub   mvndc
+  paint  mvpfet    psub   mvnfet
+  paint  mvpdiff   psub   mvndiff
+  paint  mvnsd     psub   mvpsd
+  paint  mvnsc     psub   mvpsc
+
+  # mvdiff + nwell -> diff
+  
+  paint  mvpdc     nwell  pdc
+  paint  mvpfet    nwell  pfet
+  paint  mvpdiff   nwell  pdiff
+  paint  mvnsd     nwell  nsd
+  paint  mvnsc     nwell  nsc
+  
+  # diff + mvnwell -> mvdiff
+  
+  paint  pdc     mvnwell  mvpdc
+  paint  pfet    mvnwell  mvpfet
+  paint  pdiff   mvnwell  mvpdiff
+  paint  nsd     mvnwell  mvnsd
+  paint  nsc     mvnwell  mvnsc
+
+  # diff + thickox -> mvdiff
+  
+  paint  nwell   thickox  mvnwell
+  paint  pdc     thickox  mvpdc
+  paint  pfet    thickox  mvpfet
+  paint  pdiff   thickox  mvpdiff
+  paint  nsd     thickox  mvnsd
+  paint  nsc     thickox  mvnsc
+  paint  ndc     thickox  mvndc
+  paint  nfet    thickox  mvnfet
+  paint  ndiff   thickox  mvndiff
+  paint  psd     thickox  mvpsd
+  paint  psc     thickox  mvpsc
+
+  paint  mimcap  m4     mimcap
+  paint  m1      obsm1  m1
+  paint  m2      obsm2  m2
+  paint  m3      obsm3  m3
+  paint  mtp     obsmtp  mtp
+  paint  m4      obsm4  m4
+  paint  mtpl	 obsmtpl mtpl
+end
+
+#-----------------------------------------------------
+# Electrical connectivity
+#-----------------------------------------------------
+
+connect
+  *nwell,*nsd,*mvnwell,*mvnsd *nwell,*nsd,*mvnwell,*mvnsd
+  *psub,*psd,*mvpsd,*subd,*mvsubd  *psub,*psd,*mvpsd,*subd,*mvsubd
+  *m1	*m1
+  *m2	*m2
+  *m3	*m3
+  *mtp	*mtp
+  *m4	*m4
+  *mimcap     *mimcap
+  *mtpl	*mtpl
+   allnactivenonfet	allnactivenonfet
+   allpactivenonfet	allpactivenonfet
+  *poly,cappoly,allfets	*poly,cappoly,allfets
+  allsubconn		allwellplane
+end
+
+#-----------------------------------------------------
+# CIF/GDS output layer definitions
+#-----------------------------------------------------
+# NOTE:  All values in this section MUST be multiples of 25 
+# or else magic will scale below the allowed layout grid size
+
+cifoutput
+
+############################################################################
+style drc
+############################################################################
+ scalefactor 10  nanometers
+ options calma-permissive-labels
+
+######## This section used for DRC only #############
+
+ templayer ptap_reach *psd,*subdiff,*mvpsd,*mvsubdiff
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 1600
+ and psub 
+ grow 800
+ and psub 
+ 
+ templayer ptap_missing *ndiff,*mvndiff
+ and-not ptap_reach
+ 
+ templayer ntap_reach *nsd
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 1600
+ and allnwelllv
+ grow 800
+ and allnwelllv
+ 
+ templayer mvntap_reach *mvnsd
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 1600
+ and allnwellmv
+ grow 800
+ and allnwellmv
+ 
+ templayer ntap_missing *pdiff
+ and-not ntap_reach
+
+ templayer mvntap_missing *mvpdiff
+ and-not mvntap_reach
+
+######## This section used for filling psub only #############
+
+ templayer PSUB_FILL
+	bbox top
+	and-not allwells
+
+############################################################################
+style gdsii
+############################################################################
+ scalefactor 10  nanometers
+ options calma-permissive-labels
+ gridlimit 5
+
+# VIA generation rules only for LEF file input
+ layer VIA1 	via1
+ 	squares-grid 10 260 260
+ layer VIA2 	via2
+ 	squares-grid 10 260 260
+ layer VIATP	viatp
+ 	squares-grid 10 360 340
+ layer VIA3	via3
+ 	squares-grid 10 260 260
+ layer VIATPL	viatpl
+ 	squares-grid 500 500 450
+end
+
+#-----------------------------------------------------------------------
+cifinput
+#-----------------------------------------------------------------------
+
+# For LEF and DEF file input, define vias only.
+
+style  lefdef
+ scalefactor 10 nanometers
+ gridlimit 5
+
+ options ignore-unknown-layer-labels options no-reconnect-labels 
+
+ ignore VIA4
+
+ layer m2c VIA1
+ grow 10
+ grow 120
+ shrink 120
+
+ layer m3c VIA2
+ grow 10
+ grow 120
+ shrink 120
+
+ layer via3 VIA3
+ grow 10
+ grow 120
+ shrink 120
+
+ layer viatp VIATP
+ grow 10
+ grow 120
+ shrink 120
+
+ layer viatpl VIATPL
+ grow 500
+ grow 250
+ shrink 250
+
+ calma VIA1 	17	*
+ calma VIA2 	27 	*
+ calma VIATP 	51 	*
+ calma VIA3 	29 	*
+ calma VIATPL 	36 	*
+
+end
+
+#-----------------------------------------------------
+# Digital flow maze router cost parameters
+#-----------------------------------------------------
+
+mzrouter
+end
+
+#-----------------------------------------------------
+# Vendor DRC rules
+#-----------------------------------------------------
+
+drc
+
+ style drc variants (fast),(full),(routing)
+
+ scalefactor 10 
+
+ cifstyle drc
+
+ variants (fast),(full)
+#-----------------------------
+# Boundary
+#-----------------------------
+  no_overlap boundary boundary
+
+#-----------------------------
+# Thickox
+#-----------------------------
+
+  no_overlap thickox alldifflv,allnwelllv
+
+#-----------------------------
+# NWELL
+#-----------------------------
+
+ width allnwell 860 "N-well width < 0.86um (W1WN)"
+ spacing allnwell allnwell 1400 touching_ok "N-well spacing < 1.40um (S2WN)"
+
+#-----------------------------
+# CONT
+#-----------------------------
+
+ exact_overlap ndc/a,pdc/a,psc/a,subc/a,nsc/a,pc/a,ndic/a,pdic/a
+ exact_overlap mvndc/a,mvpdc/a,mvpsc/a,mvsubc/a,mvnsc/a,mvndic/a,mvpdic/a
+
+variants *
+
+#-----------------------------
+# METAL1
+#-----------------------------
+
+ width *m1,rm1 230 "Metal1 width < 0.23um (W1M1)"
+ spacing allm1  allm1,obsm1 230 touching_ok      "Metal1 spacing < 0.23um (S1M1)"
+ area allm1,obsm1 202000 230 "Metal1 minimum area < 0.202um^2 (A1M1)"
+
+variants (fast),(full)
+ widespacing allm1 10000 allm1,obsm1  600 touching_ok \
+ "Metal1 > 10um spacing to unrelated m1 < 0.6um (S2M1)"
+
+variants *
+
+#--------------------------------------------------
+# VIA1
+#--------------------------------------------------
+
+ width v1/m1 280 "Via1 width < 0.28um (W1V1+E1M2V1)"
+ spacing v1 v1 240 touching_ok "Via1 spacing < 0.24um (S1V1 - E1M1V1)"
+ surround v1/m1 *m1 50 directional \
+	"Metal1 overlap of Via1 < 0.05um in one direction (E2M1V1 - E1M1V1)"
+ surround v1/m2 *m2 50 directional \
+	"Metal2 overlap of Via1 < 0.05um in one direction (E2M2V1 - E1V2V1)"
+
+ exact_overlap v1/m2
+
+#-----------------------------
+# METAL2
+#-----------------------------
+
+ width allm2 280 "Metal2 width < 0.28um (W1M2)"
+ spacing allm2  allm2,obsm2 280 touching_ok       "Metal2 spacing < 0.28um (S1M2)"
+ area allm2,obsm2 202000 280 "Metal2 minimum area < 0.202um^2 (A1M2)"
+
+variants (fast),(full)
+ widespacing allm2 10000 allm2,obsm2  600 touching_ok \
+ "Metal2 > 10um spacing to unrelated m2 < 0.6um (S2M2)"
+
+variants *
+
+#--------------------------------------------------
+# VIA2
+#--------------------------------------------------
+
+ width v2/m2 280 "Via2 width < 0.28um (W1V2+E1M2V2)"
+
+ spacing v2 v2 240 touching_ok "Via2 spacing < 0.24um (S1V2 - E1M2V2)"
+
+ surround v2/m2 *m2 50 directional \
+	"Metal2 overlap of Via2 < 0.05um in one direction (E2M2V2 - E1M2V2)"
+ surround v2/m3 *m3 50 directional \
+	"Metal3 overlap of Via2 < 0.05um in one direction (E2M3V2 - E1M3V2)"
+
+ exact_overlap v2/m2
+
+#-----------------------------
+# METAL3
+#-----------------------------
+
+ width allm3 280 "Metal3 width < 0.28um (W1M3)"
+ spacing allm3 allm3,obsm3  280 touching_ok      "Metal3 spacing < 0.28um (S1M3)"
+ area allm3,obsm3 202000 280 "Metal3 minimum area < 0.202um^2 (A2M3)"
+
+variants (fast),(full)
+ widespacing allm3 10000 allm3,obsm3  600 touching_ok \
+ "Metal3 > 10um spacing to unrelated m3 < 0.6um (S2M3)"
+
+variants *
+
+#-----------------------------------------------------------------------------------
+# VIATP
+#-----------------------------------------------------------------------------------
+
+ spacing vtp vtp 330 touching_ok "ViaTP spacing < 0.33um (S1VT - E1MxVT)"
+ surround vtp/mtp *mtp 80 absence_illegal \
+	"Top Metal overlap of ViaTP < 0.08um (E1MTVT - E1MxVT)"
+
+ width vtp/m4 380 "ViaTP width < 0.38um (W1VT+E1MxVT)"
+ exact_overlap vtp/m4
+ surround vtp/m4 *m4 50 directional \
+	"Metal 4 overlap of ViaTP in one direction < 0.05um (E1M4VT)"
+
+#------------------------------------------------------------
+# METALTP
+#------------------------------------------------------------
+
+variants *
+
+ width alltopm 440 "Top Metal width < 0.44um (W1MT)"
+ spacing alltopm  alltopm,obsmtp 460 touching_ok      "Top Metal spacing < 0.46um (S1MT)"
+ area alltopm 562000 440 "Top Metal minimum area < 0.562um^2 (A1MT)"
+
+variants (fast),(full)
+ widespacing alltopm 10000 alltopm,obsmtp  600 touching_ok \
+ "Top Metal > 10um spacing to unrelated Top Metal < 0.6um (S2MT)"
+
+variants *
+
+#--------------------------------------------------
+# VIA3
+#--------------------------------------------------
+
+ width v3/m3 280 "Via3 width < 0.28um (W1V3+E1M4V3)"
+ spacing v3 v3 240 touching_ok "Via3 spacing < 0.240um (S1V3)"
+ surround v3/m3 *m3 50 directional \
+	"Metal3 overlap of Via3 in one direction < 0.05um (E2M3V3 - E1M3V3)"
+ surround v3/m4 *m4 50 directional \
+	"Metal4 overlap of Via3 in one direction < 0.05um (E2M4V3 - E1M4V3)"
+
+ exact_overlap v3/m3
+
+#-----------------------------
+# METAL4
+#-----------------------------
+
+variants *
+
+ width allm4 280 "Metal4 width < 0.28um (W1M4)"
+ spacing allm4  allm4,obsm4 280 touching_ok      "Metal4 spacing < 0.28um (S1M4)"
+ area allm4,obsm4 202000 280 "Metal4 minimum area < 0.202um^2 (A1M4)"
+
+variants (fast),(full)
+ widespacing allm4 10000 allm4,obsm4  600 touching_ok \
+ "Metal4 > 10um spacing to unrelated m4 < 0.6um (S2M4)"
+
+variants *
+
+#------------------------------------------------------------
+# VIATPL - Via for thick metal (1 module)
+#------------------------------------------------------------
+
+ width vtpl/mtp 1500 "ViaTPL width < 1.50um (W1VL+E1MxVL)"
+ exact_overlap vtpl/mtp
+
+#------------------------------------------------------------
+# METALTPL - Top metal for 1 module
+#------------------------------------------------------------
+
+variants *
+
+ width allthickm 3000 "Thick Metal width < 3.0um (W1ML)"
+ spacing allthickm  allthickm,obsmtpl 2500 touching_ok   "Thick Metal spacing < 2.50um (S1ML)"
+ area allthickm 10000000 3000 "Thick Metal minimum area < 10.0um^2 (A1ML)"
+
+variants (full)
+
+ maxwidth mtpl 35000 bend_ok "MetalTPL > 35um not allowed (B1ML)"
+
+variants (fast),(full)
+
+#----------------------------
+# End DRC style
+#----------------------------
+
+ style empty
+ scalefactor 10 
+ stepsize 2000
+
+end
+
+#----------------------------
+# LEF format definitions
+#----------------------------
+
+lef
+
+ routing m1	MET1 m1 met1
+ routing m2	MET2 m2 met2
+ routing m3	MET3 m3 met3
+ routing m4	MET4 m4 met4
+ routing mtp	METTP mtp mettp MET5 m5 met5
+ routing mtpl	METTPL mtpl mettpl MET6 m6 met6
+
+ cut m2c  VIA1 via1 cont2 via12
+ cut m3c  VIA2 via2 cont3 via23
+ cut viatp VIATP VIA4 vtp cont5 vtp5 via45
+ cut via3 VIA3 via3 cont4 via34
+ cut viatpl VIATPL VIA5 vtpl cont6 vtpl6 via56
+
+ obs obsm1   MET1
+ obs obsm2   MET2
+ obs obsm3   MET3
+ obs obsmtp   METTP
+
+ obs obsm4   MET4
+ obs obsmtpl   METTPL
+
+ obs obsm1 VIA1
+
+end
+
+#-----------------------------------------------------
+# Device and Parasitic extraction
+#-----------------------------------------------------
+
+extract
+ style spice3 variants (sim),(lvs)
+ cscale 1
+ lambda  1.0
+ units	microns
+ step   100
+ sidehalo 8
+
+ planeorder well 	0
+ planeorder active 	1
+ planeorder implant 	2
+ planeorder mvimplant	3
+ planeorder metal1 	4
+ planeorder metal2 	5
+ planeorder metal3 	6
+ planeorder metal4 	7
+ planeorder metaltp 	8
+ planeorder block       9
+ planeorder comment    10 
+ planeorder metaltpl	9
+ planeorder block      10
+ planeorder comment    11 
+
+ substrate *ppdiff,*mvppdiff,space/w,psub,*subdiff,*mvsubdiff well
+
+# Resistances are in milliohms per square
+# Optional 3rd argument is the corner adjustment fraction
+ resist (nwell)/well            975000
+ resist (rnw)/well              975000 0.5
+ resist (psub)/well		900000
+ resist (*ndiff,nsd)/active 	  7500
+ resist (*pdiff,*psd)/active	  7100
+ resist (*mvndiff,mvnsd)/active   7500
+ resist (*mvpdiff,*mvpsd)/active  7100
+ resist ndiffres/active 	 61000 0.5
+ resist pdiffres/active 	127000 0.5
+ resist mvndiffres/active 	 61000 0.5
+ resist mvpdiffres/active 	127000 0.5
+ resist sres/active		  7100 0.5
+ resist pres/active		280000 0.5
+ resist nhires/active	       1000000 0.5
+
+ resist (allpolynonres)/active    7100
+
+ resist (allm1)/metal1		    95
+ resist (allm2)/metal2		    85
+ resist (allm3)/metal3	            74
+ resist (alltopm)/metaltp  	    43
+ resist (allm4)/metal4  	    85
+ resist (allthickm)/metaltpl  	    10
+
+ contact ndc,nsc		  7500
+ contact pdc,psc,subc		  7500
+ contact mvndc,mvnsc		  7500
+ contact mvpdc,mvpsc,mvsubc	  7500
+ contact pc			  7500
+ contact m2c			  5000
+ contact m3c			  5000
+ contact mimcc			  5000
+ contact viatp			  2000
+ contact via3			  5000
+ contact viatpl		  	  1200
+
+#-------------------------------------------------------------------------
+# Parasitic capacitance values
+#-------------------------------------------------------------------------
+
+variant (sim)
+
+#n-well
+defaultareacap     nwell well 120
+
+#n-active 
+# Rely on device models to capture *ndiff area cap
+# Do not extract parasitics from resistors
+# defaultareacap     allnactivenonfet active 790
+# defaultperimeter   allnactivenonfet active 280
+
+#p-active
+# Rely on device models to capture *pdiff area cap
+# Do not extract parasitics from resistors
+# defaultareacap     allpactivenonfet active 810
+# defaultperimeter   allpactivenonfet active 300
+
+#poly
+# Do not extract parasitics from resistors
+# defaultsidewall    allpolynonfet active  22
+# defaultareacap     allpolynonfet active  105
+# defaultperimeter   allpolynonfet active   57
+
+ defaultsidewall    *poly active  63
+ defaultareacap     *poly active nwell,obswell,psub well  89
+ defaultperimeter   *poly active nwell,obswell,psub well  16
+
+#metal1
+ defaultsidewall    allm1 metal1       113
+ defaultareacap     allm1 metal1 nwell,obswell,psub well  26
+ defaultperimeter   allm1 metal1 nwell,obswell,psub well  8
+ defaultoverlap     allm1 metal1 nwell well 26
+
+#metal1->diff
+ defaultoverlap     allm1 metal1 allactivenonfet active 36
+ defaultsideoverlap allm1 metal1 allactivenonfet active 9
+
+#metal1->poly
+ defaultoverlap     allm1 metal1 allpolynonres active 46
+ defaultsideoverlap allm1 metal1 allpolynonres active 10
+
+#metal2
+ defaultsidewall    allm2 metal2      101
+ defaultareacap     allm2 metal2 nwell,obswell,psub well 13
+ defaultperimeter   allm2 metal2 nwell,obswell,psub well 6
+ defaultoverlap     allm2 metal2 nwell well 13
+#metal2->active
+ defaultoverlap     allm2 metal2 allactivenonfet active 14
+ defaultsideoverlap allm2 metal2 allactivenonfet active 7
+
+#metal2->poly
+ defaultoverlap     allm2 metal2 allpolynonres active 16
+ defaultsideoverlap allm2 metal2 allpolynonres active 7
+
+#metal2->metal1
+ defaultoverlap     allm2 metal2 allm1 metal1 39
+ defaultsideoverlap allm2 metal2 allm1 metal1 10
+
+#metal3
+ defaultsidewall    allm3 metal3     102
+ defaultoverlap     allm3 metal3 nwell well 8
+ defaultareacap     allm3 metal3 nwell,obswell,psub well 8
+ defaultperimeter   allm3 metal3 nwell,obswell,psub well 5
+
+#metal3->active
+ defaultoverlap     allm3 metal3 allactive active 9
+ defaultsideoverlap allm3 metal3 allactive active 6
+
+#metal3->poly
+ defaultoverlap     allm3 metal3 allpolynonres active 10
+ defaultsideoverlap allm3 metal3 allpolynonres active 6
+
+#metal3->metal1
+ defaultoverlap     allm3 metal3 allm1 metal1 15
+ defaultsideoverlap allm3 metal3 allm1 metal1 7
+
+#metal3->metal2
+ defaultoverlap     allm3 metal3 allm2 metal2 39
+ defaultsideoverlap allm3 metal3 allm2 metal2 10
+
+
+#metaltp
+ defaultsidewall    alltopm metaltp       116
+# defaultareacap     alltopm metaltp well  6
+ areacap     	    alltopm/mtp 5
+ defaultoverlap     alltopm metaltp nwell well 5
+ defaultperimeter   alltopm metaltp well  5
+
+#metaltp->active
+ defaultoverlap     alltopm metaltp allactivenonfet active 5
+ defaultsideoverlap alltopm metaltp allactivenonfet active 5
+
+#metaltp->poly
+ defaultoverlap     alltopm metaltp allpolynonres active 5
+ defaultsideoverlap alltopm metaltp allpolynonres active 5
+
+#metaltp->metal1
+ defaultoverlap     alltopm metaltp allm1 metal1 7
+ defaultsideoverlap alltopm metaltp allm1 metal1 5
+
+#metaltp->metal2
+ defaultoverlap     alltopm metaltp allm2 metal2 9
+ defaultsideoverlap alltopm metaltp allm2 metal2 6
+
+#metaltp->metal3
+ defaultoverlap     alltopm metaltp allm3 metal3 14
+ defaultsideoverlap alltopm metaltp allm3 metal3 7
+
+#metaltp->metal4
+ defaultoverlap     alltopm metaltp allm4 metal4 34
+ defaultsideoverlap alltopm metaltp allm4 metal4 11
+
+
+#metal4
+ defaultsidewall    allm4 metal4       102
+# defaultareacap     alltopm metal4 well  6
+ areacap     	    allm4/m4 6
+ defaultoverlap     allm4 metal4 nwell well 6
+ defaultperimeter   allm4 metal4 well  5
+
+#metal4->active
+ defaultoverlap     allm4 metal4 allactivenonfet active 7
+ defaultsideoverlap allm4 metal4 allactivenonfet active 7
+
+#metal4->poly
+ defaultoverlap     allm4 metal4 allpolynonres active 7
+ defaultsideoverlap allm4 metal4 allpolynonres active 5
+
+#metal4->metal1
+ defaultoverlap     allm4 metal4 allm1 metal1 9
+ defaultsideoverlap allm4 metal4 allm1 metal1 6
+
+#metal4->metal2
+ defaultoverlap     allm4 metal4 allm2 metal2 15
+ defaultsideoverlap allm4 metal4 allm2 metal2 7
+
+#metal4->metal3
+ defaultoverlap     allm4 metal4 allm3 metal3 39
+ defaultsideoverlap allm4 metal4 allm3 metal3 10
+
+
+#metaltpl
+ defaultsidewall    allthickm metaltpl      83
+# defaultareacap     allthickm metaltplwell  4
+ areacap     	    allthickm/mtpl 4
+ defaultoverlap     allthickm metaltpl nwell well 4
+ defaultperimeter   allthickm metaltpl well  4
+
+#metaltpl->active
+ defaultoverlap     allthickm metaltpl allactivenonfet active 4
+ defaultsideoverlap allthickm metaltpl allactivenonfet active 6
+
+#metaltpl->poly
+ defaultoverlap     allthickm metaltpl allpolynonres active 4
+ defaultsideoverlap allthickm metaltpl allpolynonres active 6
+
+#metaltpl->metal1
+ defaultoverlap     allthickm metaltpl allm1 metal1 5
+ defaultsideoverlap allthickm metaltpl allm1 metal1 7
+
+#metaltpl->metal2
+ defaultoverlap     allthickm metaltpl allm2 metal2 6
+ defaultsideoverlap allthickm metaltpl allm2 metal2 8
+
+#metaltpl->metal3
+ defaultoverlap     allthickm metaltpl allm3 metal3 8
+ defaultsideoverlap allthickm metaltpl allm3 metal3 10
+
+#metaltpl->metal4
+ defaultoverlap     allthickm metaltpl allm4 metal4 11
+ defaultsideoverlap allthickm metaltpl allm4 metal4 13
+
+#metaltpl->metalttp
+ defaultoverlap     allthickm metaltpl alltopm metaltp 34
+ defaultsideoverlap allthickm metaltpl alltopm metaltp 30
+
+# Devices
+
+ device msubcircuit pe pfet *pdiff,pdiffres *pdiff,pdiffres nwell error l=l w=w
+ device msubcircuit ne nfet *ndiff,ndiffres *ndiff,ndiffres psub,space/w error l=l w=w
+ device msubcircuit nn nnfet *ndiff,ndiffres *ndiff,ndiffres psub,space/w error l=l w=w
+ device subcircuit mosvc varactor *nndiff nwell error l=l w=w
+
+ device msubcircuit pe3 mvpfet *mvpdiff,mvpdiffres *mvpdiff,mvpdiffres mvnwell error l=l w=w
+ device msubcircuit ne3 mvnfet *mvndiff,mvndiffres *mvndiff,mvndiffres psub,space/w error l=l w=w
+ device msubcircuit nn3 mvnnfet *mvndiff,mvndiffres *mvndiff,mvndiffres psub,space/w error l=l w=w
+ device subcircuit mosvc3 mvvaractor *mvnndiff mvnwell error l=l w=w
+
+ device rsubcircuit rm1 rmetal1 *metal1 psub,space/w,nwell,mvnwell error l=l w=w
+ device rsubcircuit rm2 rmetal2 *metal2 psub,space/w,nwell,mvnwell error l=l w=w
+ device rsubcircuit rm3 rmetal3 *metal3 psub,space/w,nwell,mvnwell error l=l w=w
+ device rsubcircuit rmtp rmtp *mtp psub,space/w,nwell,mvnwell error l=l w=w
+ device rsubcircuit rm4 rm4 *m4 psub,space/w,nwell,mvnwell error l=l w=w
+ device rsubcircuit rmtpl rmtpl *mtpl psub,space/w,nwell,mvnwell error l=l w=w
+
+ device rsubcircuit rp1  pres     *poly1 psub,space/w error l=l w=w
+ device rsubcircuit rsp1 sres     *poly1 psub,space/w error 	l=l w=w
+ device rsubcircuit rnp1h nhires   *poly1 psub,space/w error 	l=l w=w
+ device rsubcircuit rpp1  ppres    *poly1 psub,space/w error 	l=l w=w
+ device rsubcircuit rnp1  npres    *poly1 psub,space/w error 	l=l w=w
+
+ device rsubcircuit rdn  ndiffres *ndiff psub,space/w  error l=l w=w
+ device rsubcircuit rdp  pdiffres *pdiff nwell   error  l=l w=w
+ device rsubcircuit rw   rnw       nwell psub,space/w  error l=l w=w
+
+ device rsubcircuit rdn3  mvndiffres *mvndiff psub,space/w  error l=l w=w
+ device rsubcircuit rdp3  mvpdiffres *mvpdiff mvnwell   error  l=l w=w
+
+ device subcircuit  dp *pdiode nwell a=area
+ device msubcircuit dn *ndiode psub,space/w a=area
+ device msubcircuit dnw *nndiode nwell a=area
+
+ device subcircuit  dp3 *mvpdiode mvnwell a=area
+ device msubcircuit dn3 *mvndiode psub,space/w a=area
+ device msubcircuit dnw3 *mvnndiode mvnwell a=area
+
+ device subcircuit cmm5t *mimcap  *m4   psub,space/w,nwell,mvnwell error a=a p=p
+
+ variant (lvs)
+
+ device mosfet pe pfet pdiff,pdiffres,pdc nwell 
+ device mosfet ne nfet ndiff,ndiffres,ndc psub,space/w
+ device mosfet mosvc varactor *nndiff nwell
+ device mosfet pe3 mvpfet mvpdiff,mvpdiffres,mvpdc mvnwell 
+ device mosfet ne3 mvnfet mvndiff,mvndiffres,mvndc psub,space/w
+ device mosfet mosvc3 mvvaractor *mvnndiff mvnwell
+
+ device resistor rm1 rmetal1 *metal1
+ device resistor rm2 rmetal2 *metal2
+ device resistor rm3 rmetal3 *metal3
+ device resistor rmtp rmtp *mtp
+ device resistor rm4 rm4 *m4
+ device resistor rmtpl rmtpl *mtpl
+
+ device resistor rp1  pres     *poly1 
+ device resistor rsp1 sres     *poly1 
+ device resistor rnp1h nhires    *poly1 
+ device resistor rpp1 ppres    *poly1 
+ device resistor rnp1 npres    *poly1 
+ device resistor rdn  ndiffres *ndiff 
+ device resistor rdp  pdiffres *pdiff 
+ device resistor rdn3  mvndiffres *mvndiff 
+ device resistor rdp3  mvpdiffres *mvpdiff 
+ device resistor rw   rnw       nwell
+ device resistor rw3  mvrnw     mvnwell
+
+ device pdiode dp *pdiode nwell a=area
+ device ndiode dn *ndiode space/w a=area
+ device ndiode dnw *nndiode nwell a=area
+ device pdiode dp3 *mvpdiode mvnwell a=area
+ device ndiode dn3 *mvndiode space/w a=area
+ device ndiode dnw3 *mvnndiode mvnwell a=area
+
+ device subcircuit cmm5t *mimcap  *m4   psub,space/w,nwell,mvnwell error a=a p=p
+
+end
+
+#-----------------------------------------------------
+# Wiring tool definitions
+#-----------------------------------------------------
+
+wiring
+
+ contact v1 16 m1 1 m2 0 
+ contact v2 16 m2 1 m3 0 
+ contact vtp 18 m4 0 mtp 4 
+ contact v3 18 m3 0 m4 4 
+
+ contact pdc 14 pdiff  0 m1 0
+ contact ndc 14 ndiff  0 m1 0
+ contact psc 14 ppdiff 0 m1 0
+ contact nsc 14 nndiff 0 m1 0
+ contact p1c 14 poly1  1 m1 0
+ contact mvpdc 14 mvpdiff  0 m1 0
+ contact mvndc 14 mvndiff  0 m1 0
+ contact mvpsc 14 mvppdiff 0 m1 0
+ contact mvnsc 14 mvnndiff 0 m1 0
+
+end
+
+#-----------------------------------------------------
+# Plain old router. . . 
+#-----------------------------------------------------
+
+router
+end
+
+#------------------------------------------------------------
+# Plowing (restored in magic 8.2, need to fill this section)
+#------------------------------------------------------------
+
+plowing
+end
+
+#-----------------------------------------------------------------
+# No special plot layers defined (use default PNM color choices)
+#-----------------------------------------------------------------
+
+plot
+  style pnm
+     default
+     draw boundary no_color_at_all
+     draw fillblock no_color_at_all
+     draw thickox no_color_at_all
+     draw nimp no_color_at_all
+     draw pimp no_color_at_all
+     draw nwell cwell
+     draw mvnwell cwell
+end
+

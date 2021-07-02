@@ -1,0 +1,25 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1555546719
+use efabless_logo  efabless_logo_0
+timestamp 1523028597
+transform 1 0 -69538 0 1 242793
+box 0 -11550 11400 150
+use product_name  product_name_0
+timestamp 1555546719
+transform 1 0 0 0 1 0
+box -69403 228445 -57665 230397
+use manufacturer  manufacturer_0
+timestamp 1523030009
+transform 1 0 0 0 1 0
+box -69389 226114 -59690 228037
+use mask_copyright  mask_copyright_0
+timestamp 1494891594
+transform 1 0 -69230 0 1 221129
+box -208 -208 4480 4480
+use date  date_0
+timestamp 1555546584
+transform 1 0 -41 0 1 486
+box -64227 222993 -59501 224913
+<< end >>

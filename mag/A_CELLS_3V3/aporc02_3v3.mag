@@ -1,0 +1,55 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1513869493
+<< checkpaint >>
+rect -60000 -60000 65080 80000
+<< metal1 >>
+rect 0 19000 5080 20000
+rect 0 0 5080 1000
+<< obsm1 >>
+rect 0 1046 5080 18954
+<< metal2 >>
+rect 287 19600 363 20000
+rect 510 19600 586 20000
+rect 287 0 363 400
+rect 510 0 586 400
+<< obsm2 >>
+rect 0 19544 231 20000
+rect 419 19544 454 20000
+rect 642 19544 5080 20000
+rect 0 456 5080 19544
+rect 0 0 231 456
+rect 419 0 454 456
+rect 642 0 5080 456
+<< metal3 >>
+rect 0 19400 5080 20000
+rect 0 0 5080 1000
+<< obsm3 >>
+rect 0 1056 5080 19344
+<< labels >>
+rlabel metal2 287 19600 363 20000 6 POR
+port 1 nsew analog output
+rlabel metal2 287 0 363 400 6 POR
+port 1 nsew analog output
+rlabel metal2 510 19600 586 20000 6 PORB
+port 2 nsew analog output
+rlabel metal2 510 0 586 400 6 PORB
+port 2 nsew analog output
+rlabel metal1 0 19000 5080 20000 6 VDDA
+port 3 nsew power input
+rlabel metal3 0 19400 5080 20000 6 VDDA
+port 3 nsew power input
+rlabel metal1 0 0 5080 1000 6 VSSA
+port 4 nsew ground input
+rlabel metal3 0 0 5080 1000 6 VSSA
+port 4 nsew ground input
+<< properties >>
+string LEFclass CORE
+string LEFsite ana_std_33V
+string LEFview TRUE
+string LEFsymmetry X Y
+string FIXED_BBOX 0 0 5080 20000
+string GDS_FILE /ef/tech/XFAB.3/EFXH018D/libs.ref/gds/A_CELLS_3V3/aporc02_3v3.gds
+string GDS_START 0
+<< end >>

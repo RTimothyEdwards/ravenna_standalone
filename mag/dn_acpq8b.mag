@@ -1,0 +1,51 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1567007490
+<< psub >>
+rect -209 -209 209 209
+<< psubdiff >>
+rect -185 166 185 185
+rect -185 120 -63 166
+rect 63 120 185 166
+rect -185 101 185 120
+rect -185 63 -101 101
+rect -185 -63 -166 63
+rect -120 -63 -101 63
+rect 101 63 185 101
+rect -185 -101 -101 -63
+rect 101 -63 120 63
+rect 166 -63 185 63
+rect 101 -101 185 -63
+rect -185 -120 185 -101
+rect -185 -166 -63 -120
+rect 63 -166 185 -120
+rect -185 -185 185 -166
+<< psubdiffcont >>
+rect -63 120 63 166
+rect -166 -63 -120 63
+rect 120 -63 166 63
+rect -63 -166 63 -120
+<< ndiode >>
+rect -45 26 45 45
+rect -45 -26 -26 26
+rect 26 -26 45 26
+rect -45 -45 45 -26
+<< ndiodec >>
+rect -26 -26 26 26
+<< metal1 >>
+rect -166 120 -63 166
+rect 63 120 166 166
+rect -166 63 -120 120
+rect 120 63 166 120
+rect -37 -26 -26 26
+rect 26 -26 37 26
+rect -166 -120 -120 -63
+rect 120 -120 166 -63
+rect -166 -166 -63 -120
+rect 63 -166 166 -120
+<< properties >>
+string parameters w 0.45 l 0.45 area 202.5m peri 1.8 nx 1 ny 1 dummy 0 lmin 0.45 wmin 0.45 elc 1 erc 1 etc 1 ebc 1 doverlap 0 full_metal 1
+string gencell dn
+string library efxh018
+<< end >>

@@ -1,0 +1,17 @@
+timestamp 1555546719
+version 8.2
+tech EFXH018D
+style spice3(sim)
+scale 1000 1 0.5
+resistclasses 975000 975000 900000 7500 7100 7500 7100 61000 127000 61000 127000 7100 280000 1000000 7100 95 85 74 43 85 10
+use efabless_logo efabless_logo_0 1 0 -69538 0 1 242793
+use product_name product_name_0 1 0 0 0 1 0
+use manufacturer manufacturer_0 1 0 0 0 1 0
+use mask_copyright mask_copyright_0 1 0 -69230 0 1 221129
+use date date_0 1 0 -41 0 1 486
+substrate "w_n1073741817_n1073741817#" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "efabless_logo_0/w_n1073741817_n1073741817#" "product_name_0/w_n1073741817_n1073741817#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "product_name_0/w_n1073741817_n1073741817#" "manufacturer_0/w_n1073741817_n1073741817#"
+merge "manufacturer_0/w_n1073741817_n1073741817#" "date_0/w_n1073741817_n1073741817#"
+merge "date_0/w_n1073741817_n1073741817#" "mask_copyright_0/w_n1073741817_n1073741817#"
+merge "mask_copyright_0/w_n1073741817_n1073741817#" "w_n1073741817_n1073741817#"

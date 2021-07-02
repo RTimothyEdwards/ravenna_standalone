@@ -1,0 +1,79 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1513869363
+<< checkpaint >>
+rect -60000 -60000 73600 80000
+<< metal1 >>
+rect 0 19000 13600 20000
+rect 0 0 13600 1000
+<< obsm1 >>
+rect 0 1046 13600 18954
+<< metal2 >>
+rect 416 19940 476 20000
+rect 3149 19940 3209 20000
+rect 4237 19940 4297 20000
+rect 5325 19940 5385 20000
+rect 6413 19940 6473 20000
+rect 416 0 476 60
+rect 3149 0 3209 60
+rect 4237 0 4297 60
+rect 5325 0 5385 60
+rect 6413 0 6473 60
+<< obsm2 >>
+rect 0 19884 360 20000
+rect 532 19884 3093 20000
+rect 3265 19884 4181 20000
+rect 4353 19884 5269 20000
+rect 5441 19884 6357 20000
+rect 6529 19884 13600 20000
+rect 0 116 13600 19884
+rect 0 0 360 116
+rect 532 0 3093 116
+rect 3265 0 4181 116
+rect 4353 0 5269 116
+rect 5441 0 6357 116
+rect 6529 0 13600 116
+<< metal3 >>
+rect 0 19400 13600 20000
+rect 0 0 13600 1000
+<< obsm3 >>
+rect 0 1056 13600 19344
+<< labels >>
+rlabel metal3 0 19400 13600 20000 6 VDDA
+port 1 nsew power input
+rlabel metal1 0 19000 13600 20000 6 VDDA
+port 1 nsew power input
+rlabel metal3 0 0 13600 1000 6 VSSA
+port 2 nsew ground input
+rlabel metal1 0 0 13600 1000 6 VSSA
+port 2 nsew ground input
+rlabel metal2 416 0 476 60 6 EN
+port 3 nsew signal input
+rlabel metal2 416 19940 476 20000 6 EN
+port 3 nsew signal input
+rlabel metal2 5325 0 5385 60 6 CS2_200N
+port 4 nsew signal bidirectional
+rlabel metal2 5325 19940 5385 20000 6 CS2_200N
+port 4 nsew signal bidirectional
+rlabel metal2 4237 0 4297 60 6 CS1_200N
+port 5 nsew signal bidirectional
+rlabel metal2 4237 19940 4297 20000 6 CS1_200N
+port 5 nsew signal bidirectional
+rlabel metal2 3149 0 3209 60 6 CS0_200N
+port 6 nsew signal bidirectional
+rlabel metal2 3149 19940 3209 20000 6 CS0_200N
+port 6 nsew signal bidirectional
+rlabel metal2 6413 0 6473 60 6 CS3_200N
+port 7 nsew signal bidirectional
+rlabel metal2 6413 19940 6473 20000 6 CS3_200N
+port 7 nsew signal bidirectional
+<< properties >>
+string LEFclass CORE
+string LEFsite ana_std_33V
+string LEFview TRUE
+string LEFsymmetry X Y
+string FIXED_BBOX 0 0 13600 20000
+string GDS_FILE /ef/tech/XFAB.3/EFXH018D/libs.ref/gds/A_CELLS_3V3/acsoc01_3v3.gds
+string GDS_START 0
+<< end >>

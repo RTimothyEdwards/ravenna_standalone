@@ -1,0 +1,30 @@
+timestamp 1523030009
+version 8.2
+tech EFXH018D
+style spice3(sim)
+scale 1000 1 0.5
+resistclasses 975000 975000 900000 7500 7100 7500 7100 61000 127000 61000 127000 7100 280000 1000000 7100 95 85 74 43 85 10
+use _alphabet_E _alphabet_E_1 1 0 -69389 0 1 226114
+use _alphabet_F _alphabet_F_0 1 0 -68135 0 1 226114
+use _alphabet_A _alphabet_A_1 1 0 -66949 0 1 226117
+use _alphabet_B _alphabet_B_0 1 0 -65679 0 1 226115
+use _alphabet_L _alphabet_L_0 1 0 -64425 0 1 226114
+use _alphabet_E _alphabet_E_2 1 0 -63122 0 1 226114
+use _alphabet_S _alphabet_S_0 1 0 -61934 0 1 226114
+use _alphabet_S _alphabet_S_1 1 0 -60746 0 1 226114
+substrate "w_n1073741817_n1073741817#" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "_alphabet_F_0/m2_0_0#" "_alphabet_E_1/m2_0_0#" 220.364
+cap "_alphabet_A_1/m2_0_0#" "_alphabet_B_0/m2_0_0#" 755.14
+cap "_alphabet_B_0/m2_0_0#" "_alphabet_L_0/m2_0_0#" 959.656
+cap "_alphabet_L_0/m2_0_0#" "_alphabet_E_2/m2_0_0#" 36.3146
+cap "_alphabet_E_2/m2_0_0#" "_alphabet_S_0/m2_32_224#" 56.2268
+cap "_alphabet_E_2/m2_0_0#" "_alphabet_L_0/m2_0_0#" 78.5101
+cap "_alphabet_S_0/m2_32_224#" "_alphabet_S_1/m2_32_224#" 287.585
+merge "_alphabet_S_1/w_n1073741817_n1073741817#" "_alphabet_S_0/w_n1073741817_n1073741817#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "_alphabet_S_0/w_n1073741817_n1073741817#" "_alphabet_E_2/w_n1073741817_n1073741817#"
+merge "_alphabet_E_2/w_n1073741817_n1073741817#" "_alphabet_L_0/w_n1073741817_n1073741817#"
+merge "_alphabet_L_0/w_n1073741817_n1073741817#" "_alphabet_B_0/w_n1073741817_n1073741817#"
+merge "_alphabet_B_0/w_n1073741817_n1073741817#" "_alphabet_A_1/w_n1073741817_n1073741817#"
+merge "_alphabet_A_1/w_n1073741817_n1073741817#" "_alphabet_F_0/w_n1073741817_n1073741817#"
+merge "_alphabet_F_0/w_n1073741817_n1073741817#" "_alphabet_E_1/w_n1073741817_n1073741817#"
+merge "_alphabet_E_1/w_n1073741817_n1073741817#" "w_n1073741817_n1073741817#"

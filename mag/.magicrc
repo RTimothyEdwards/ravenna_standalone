@@ -1,0 +1,29 @@
+puts stdout "Sourcing design .magicrc for technology EFXH018D_lite ..."
+
+# Put grid on 0.005 pitch.  This is important, as some commands don't
+# rescale the grid automatically (such as lef read?).  Some X-Fab IP
+# is on the fine-pitch grid, mostly due to the contact definitions
+# using a 0.005 metal surround incorporated into the contact type.
+
+set scalefac [tech lambda]
+if {[lindex $scalefac 1] < 2} {
+    scalegrid 1 2
+}
+
+# drc off
+drc euclidean on
+
+# loading technology
+tech load EFXH018D_lite.tech
+
+# set units to lambda grid 
+snap lambda
+
+# add path to reference cells
+addpath markings
+addpath A_CELLS_1V8
+addpath A_CELLS_3V3
+addpath D_CELLS_3V
+addpath IO_CELLS_F3V
+addpath IO_CELLS_FC3V
+

@@ -1,0 +1,76 @@
+magic
+tech EFXH018D
+timestamp 1513869437
+<< checkpaint >>
+rect -30000 -30000 45400 40000
+<< metal1 >>
+rect 0 9500 15400 10000
+rect 0 0 15400 500
+<< obsm1 >>
+rect 0 546 15400 9454
+<< metal2 >>
+rect 203 9900 241 10000
+rect 1051 9900 1089 10000
+rect 1172 9900 1210 10000
+rect 2624 9900 2662 10000
+rect 7986 9900 8146 10000
+rect 203 0 241 100
+rect 1051 0 1089 100
+rect 1172 0 1210 100
+rect 2624 0 2662 100
+rect 7986 0 8146 100
+<< obsm2 >>
+rect 0 9858 161 10000
+rect 283 9858 1009 10000
+rect 1252 9858 2582 10000
+rect 2704 9858 7944 10000
+rect 8188 9858 15400 10000
+rect 0 142 15400 9858
+rect 0 0 161 142
+rect 283 0 1009 142
+rect 1252 0 2582 142
+rect 2704 0 7944 142
+rect 8188 0 15400 142
+<< metal3 >>
+rect 0 9700 15400 10000
+rect 0 0 15400 500
+<< obsm3 >>
+rect 0 566 15400 9634
+<< labels >>
+rlabel metal2 203 9900 241 10000 6 EN
+port 1 nsew default input
+rlabel metal2 203 0 241 100 6 EN
+port 1 nsew default input
+rlabel metal2 1172 9900 1210 10000 6 INP
+port 2 nsew default input
+rlabel metal2 1172 0 1210 100 6 INP
+port 2 nsew default input
+rlabel metal2 2624 9900 2662 10000 6 INN
+port 3 nsew default input
+rlabel metal2 2624 0 2662 100 6 INN
+port 3 nsew default input
+rlabel metal2 7986 9900 8146 10000 6 OUT
+port 4 nsew default output
+rlabel metal2 7986 0 8146 100 6 OUT
+port 4 nsew default output
+rlabel metal2 1051 9900 1089 10000 6 IB
+port 5 nsew default input
+rlabel metal2 1051 0 1089 100 6 IB
+port 5 nsew default input
+rlabel metal1 0 9500 15400 10000 6 VDDA
+port 6 nsew power input
+rlabel metal3 0 9700 15400 10000 6 VDDA
+port 6 nsew power input
+rlabel metal1 0 0 15400 500 6 VSSA
+port 7 nsew ground input
+rlabel metal3 0 0 15400 500 6 VSSA
+port 7 nsew ground input
+<< properties >>
+string LEFclass CORE
+string LEFsite ana_std_33V
+string LEFview TRUE
+string LEFsymmetry X Y
+string FIXED_BBOX 0 0 15400 10000
+string GDS_FILE /ef/tech/XFAB.3/EFXH018D/libs.ref/gds/A_CELLS_3V3/aopac01_3v3.gds
+string GDS_START 0
+<< end >>

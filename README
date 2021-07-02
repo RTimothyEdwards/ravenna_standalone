@@ -1,0 +1,38 @@
+This is a standalone repository for the efabless Ravenna chip,
+a small RISC-V microcontroller based on the picoRV32 architecture
+and contained in an SoC environment with numerous analog
+components such as ADCs, a DAC, temperature sensor, comparator,
+etc.;  having 16kB on-board memory, an SPI flash controller,
+and 136 bits of non-volatile memory.
+
+The complete set of design files for the Ravenna chip is available
+on the efabless platform, but because a number of the files are
+X-Fab foundry proprietary, they cannot be used off-platform.
+
+This repository is missing GDS files (proprietary) and most of
+the layout, but contains a full set of verilog files for
+simulating the Ravenna chip.  The X-Fab proprietary verilog
+modules for the analog IP and SRAM blocks have been replaced by
+simple functional equivalents.  The Ravenna processor itself is
+a RISC-V design, the picoRV32, and the design is open-source.
+
+The chip can be simulated in iverilog by cd'ing to the verilog/
+directory and doing "make" or else cd'ing to each of the
+subdirectories of verilog/ and running "make" for each
+individual testbench.  Each testbench validates a specific
+processor or peripheral feature.
+
+Simulation requires the RISC-V riscv32imc gcc toolchain and the
+iverilog simulator.  The waveform viewer gtkwave is recommended
+for viewing the .vcd output files.
+
+Several simulations have hex targets created from TensorFlow lite.
+Ravenna extensions to the TensorFlow repository are in a fork
+(to be published mid-2021).
+
+This repository also contains Python scripts which can access
+the Ravenna chip on its development board, although these are
+just copied from the efabless ravenna repository on github.
+
+Obtaining one of the few existing Ravenna demonstration boards
+is another problem altogether.

@@ -1,0 +1,30 @@
+ravenna_irq:
+
+This testbench exercises the IRQ using the internal picorv32 timer and the
+SPI master module IRQ.  It mimics the use of a Digilent MIC3 PMOD module
+on the demo board.
+
+The interrupt handler is written in assembly in the start.S file but copied
+to main memory so that it can be run as fast as possible.
+
+The general method of the program is to make 16-bit reads on the SPI.  These
+reads are timed by the picorv32 internal timer to occur at exact regular
+intervals at a 16kHz audio sampling rate.  The interrupt routine is used to
+make sure that the SPI handling is done mostly in the background while the
+program otherwise runs normally off of the flash.
+
+The interrupt routine runs in known fixed stages:
+(1) Initiate first SPI byte transfer in streaming mode
+(2) Read result of 1st byte transfer and initiate second byte transfer
+(3) Read result of 2nd byte transfer and end streaming mode
+
+Step (1) waits for the picorv32 internal timer IRQ;  steps (2) and (3) wait
+for the SPI master module IRQ.
+
+There is a slight complication in that the SPI IRQ persists longer than
+one clock cycle, and so a 2nd IRQ event gets scheduled fastert than the
+IRQ can be masked.  These two "false" IRQ events have to be processed
+quickly.
+
+This testbench should be able to be run on the Ravenna test board with a
+Digilent module, and respond to sound with an LED level.

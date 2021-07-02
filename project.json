@@ -1,0 +1,519 @@
+{
+    "data-sheet": {
+        "description": "Full-chip implementation of the PicoRV32 PicoSoC in X-Fab XH018.  The ravenna chip contains 8kB memory, 512 bits non-volatile memory, an I2C master, two ADCs, a DAC, comparator, bandgap, RC oscillator, and over-temperature alarm, as well as 16 bits of general-purpose digital inputs/outputs.  It is powered off of a single 3.3V supply and driven by a 5 to 12 MHz crystal.  The core CPU clock speed is 8 times the crystal frequency.",
+        "physical-params": [
+            {
+                "condition": "device_area",
+                "max": {
+                    "penalty": "0",
+                    "target": "3534616",
+                    "value": "3534616"
+                },
+                "unit": "\u00b5m\u00b2",
+                "display": "Device area"
+            },
+            {
+                "condition": "area",
+                "max": {
+                    "penalty": "fail",
+                    "target": "3121080.5",
+                    "value": "3121080.5"
+                },
+                "unit": "\u00b5m\u00b2",
+                "display": "Layout area"
+            },
+            {
+                "condition": "width",
+                "max": {
+                    "penalty": "100",
+                    "target": "1744.4",
+                    "value": "1744.4"
+                },
+                "unit": "\u00b5m",
+                "display": "Layout width"
+            },
+            {
+                "condition": "height",
+                "max": {
+                    "penalty": "100",
+                    "target": "1789.2",
+                    "value": "1789.2"
+                },
+                "unit": "\u00b5m",
+                "display": "Layout height"
+            },
+            {
+                "condition": "DRC_errors",
+                "max": {
+                    "penalty": "fail",
+                    "target": "0"
+                },
+                "display": "DRC errors"
+            },
+            {
+                "condition": "LVS_errors",
+                "max": {
+                    "penalty": "fail",
+                    "target": "0"
+                },
+                "display": "LVS errors"
+            }
+        ],
+        "pins": [
+            {
+                "description": "external 1-pin clock input",
+                "dir": "input",
+                "name": "XCLK",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "crytal oscillator input",
+                "dir": "inout",
+                "name": "XI",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "crytal oscillator output",
+                "dir": "inout",
+                "name": "XO",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "housekeeping SPI data input",
+                "dir": "input",
+                "name": "SDI",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "housekeeping SPI data output",
+                "dir": "output",
+                "name": "SDO",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "housekeeping SPI clock",
+                "dir": "input",
+                "name": "SCK",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "housekeeping SPI chip select (sense inverted)",
+                "dir": "input",
+                "name": "CSB",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "UART receive channel",
+                "dir": "input",
+                "name": "ser_rx",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "UART transmit channel",
+                "dir": "output",
+                "name": "ser_tx",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "I2C data channel",
+                "dir": "inout",
+                "name": "i2c_sda",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "I2C clock channel",
+                "dir": "inout",
+                "name": "i2c_scl",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "SPI master clock",
+                "dir": "output",
+                "name": "spi_sck",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "SPI master select",
+                "dir": "output",
+                "name": "spi_csb",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "SPI master data output",
+                "dir": "output",
+                "name": "spi_sdo",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "SPI master data input",
+                "dir": "input",
+                "name": "spi_sdi",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "Dedicated external interrupt",
+                "dir": "input",
+                "name": "irq",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "Flash SPI chip select (active low)",
+                "dir": "output",
+                "name": "flash_csb",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "Flash SPI clock",
+                "dir": "output",
+                "name": "flash_clk",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "Flash QSPI channel 0",
+                "dir": "inout",
+                "name": "flash_io0",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "Flash QSPI channel 1",
+                "dir": "inout",
+                "name": "flash_io1",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "Flash QSPI channel 2",
+                "dir": "inout",
+                "name": "flash_io2",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "Flash QSPI channel 3",
+                "dir": "inout",
+                "name": "flash_io3",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 15",
+                "dir": "inout",
+                "name": "gpio_15",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 14",
+                "dir": "inout",
+                "name": "gpio_14",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 13",
+                "dir": "inout",
+                "name": "gpio_13",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 12",
+                "dir": "inout",
+                "name": "gpio_12",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 11",
+                "dir": "inout",
+                "name": "gpio_11",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 10",
+                "dir": "inout",
+                "name": "gpio_10",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 9",
+                "dir": "inout",
+                "name": "gpio_9",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 8",
+                "dir": "inout",
+                "name": "gpio_8",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 7",
+                "dir": "inout",
+                "name": "gpio_7",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 6",
+                "dir": "inout",
+                "name": "gpio_6",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 5",
+                "dir": "inout",
+                "name": "gpio_5",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 4",
+                "dir": "inout",
+                "name": "gpio_4",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 3",
+                "dir": "inout",
+                "name": "gpio_3",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 2",
+                "dir": "inout",
+                "name": "gpio_2",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 1",
+                "dir": "inout",
+                "name": "gpio_1",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "GPIO channel 0",
+                "dir": "inout",
+                "name": "gpio_0",
+                "type": "signal",
+                "Vmax": "VDD3V3 + 0.3",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "ADC and DAC reference voltage (high)",
+                "dir": "input",
+                "name": "adc_high",
+                "type": "analog",
+                "Vmax": "VDD3V3 + 0.5",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "ADC and DAC reference voltage (low)",
+                "dir": "input",
+                "name": "adc_low",
+                "type": "analog",
+                "Vmax": "VDD3V3 + 0.5",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "ADC0 analog input",
+                "dir": "input",
+                "name": "adc0_in",
+                "type": "analog",
+                "Vmax": "VDD3V3 + 0.5",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "ADC1 analog input",
+                "dir": "input",
+                "name": "adc1_in",
+                "type": "analog",
+                "Vmax": "VDD3V3 + 0.5",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "Comparator negative input",
+                "dir": "input",
+                "name": "comp_inn",
+                "type": "analog",
+                "Vmax": "VDD3V3 + 0.5",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "Comparator positive input",
+                "dir": "input",
+                "name": "comp_inp",
+                "type": "analog",
+                "Vmax": "VDD3V3 + 0.5",
+                "Vmin": "-0.5"
+            },
+            {
+                "description": "DAC and bandgap analog output",
+                "dir": "output",
+                "name": "analog_out",
+                "type": "analog",
+                "Vmax": "VDD3V3",
+                "Vmin": "0.0"
+            },
+            {
+                "description": "Core Analog/Digital voltage (output)",
+                "dir": "inout",
+                "name": "VDD1V8",
+                "type": "power",
+                "Vmax": "2.1",
+                "Vmin": "1.5"
+            },
+            {
+                "description": "Common Analog/Digital power supply",
+                "dir": "inout",
+                "name": "VDD3V3",
+                "type": "power",
+                "Vmax": "3.0",
+                "Vmin": "3.6"
+            },
+            {
+                "description": "Common Analog/Digital Ground",
+                "dir": "inout",
+                "name": "GND",
+                "type": "ground",
+                "Vmax": "0",
+                "Vmin": "0"
+            }
+        ],
+        "node": "EFXH018D",
+        "foundry": "XFAB",
+        "global-conditions": [
+            {
+                "condition": "VOLTAGE:VDD3V3",
+                "typ": "3.3",
+                "unit": "V",
+                "display": "VDD3V3"
+            },
+            {
+                "condition": "VOLTAGE:GND",
+                "typ": "0",
+                "unit": "V",
+                "display": "Ground"
+            },
+            {
+                "condition": "CORNER",
+                "typ": "tm",
+                "display": "Corner"
+            },
+            {
+                "condition": "SIGMA",
+                "typ": "3",
+                "display": "Sigma"
+            }
+        ],
+        "ip-name": "ravenna",
+        "electrical-params": [
+            {
+                "method": "RAVENNA_GPIO:PLOT",
+                "display": "GPIO functional plot",
+                "conditions": [],
+                "unit": "V",
+                "variables": [
+                    {
+                        "condition": "TIME",
+                        "unit": "\u00b5s",
+                        "display": "Time"
+                    },
+                    {
+                        "condition": "VOLTAGE:GPIO0",
+                        "unit": "V",
+                        "display": "gpio_0"
+                    },
+                    {
+                        "condition": "VOLTAGE:POR",
+                        "unit": "V",
+                        "display": "POR"
+                    },
+                    {
+                        "condition": "VOLTAGE:FLASH_IO0",
+                        "unit": "V",
+                        "display": "flash_io_0"
+                    },
+                    {
+                        "condition": "VOLTAGE:FLASH_IO1",
+                        "unit": "V",
+                        "display": "flash_io_1"
+                    }
+                ],
+                "plot": {
+                    "xlabel": "Time",
+                    "xaxis": "TIME",
+                    "filename": "ravenna_gpio.png"
+                }
+            }
+        ],
+        "category": "MICROPROCESSOR",
+        "format": "3",
+        "standard-cell": "default"
+    }
+}

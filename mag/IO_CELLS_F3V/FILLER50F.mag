@@ -1,0 +1,275 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1529526440
+<< checkpaint >>
+rect -6000 -6000 16000 38000
+<< obsm1 >>
+rect 0 0 10000 32000
+<< metal2 >>
+rect 0 31172 100 31852
+rect 0 30727 100 31053
+rect 0 30133 100 30533
+rect 0 29333 100 30013
+rect 0 29034 100 29236
+rect 0 28769 100 28965
+rect 9900 31172 10000 31852
+rect 9900 30727 10000 31053
+rect 9900 30133 10000 30533
+rect 9900 29333 10000 30013
+rect 9900 29034 10000 29236
+rect 9900 28769 10000 28965
+rect 0 22448 100 28360
+rect 9900 22448 10000 28360
+rect 0 0 100 6400
+rect 9900 0 10000 6400
+<< obsm2 >>
+rect 0 31972 10000 32000
+rect 220 28649 9780 31972
+rect 0 28480 10000 28649
+rect 220 22328 9780 28480
+rect 0 6520 10000 22328
+rect 220 0 9780 6520
+<< metal3 >>
+rect 0 31172 100 31852
+rect 0 30653 100 31053
+rect 0 30133 100 30533
+rect 0 29333 100 30013
+rect 0 29057 100 29241
+rect 0 28769 100 28965
+rect 9900 31172 10000 31852
+rect 9900 30653 10000 31053
+rect 9900 30133 10000 30533
+rect 9900 29333 10000 30013
+rect 9900 29057 10000 29241
+rect 9900 28769 10000 28965
+rect 0 22024 100 28424
+rect 9900 22024 10000 28424
+rect 0 0 100 6800
+rect 9900 0 10000 6800
+<< obsm3 >>
+rect 0 31972 10000 32000
+rect 220 28649 9780 31972
+rect 0 28544 10000 28649
+rect 220 21904 9780 28544
+rect 0 6920 10000 21904
+rect 220 0 9780 6920
+<< metal4 >>
+rect 0 31172 100 31852
+rect 0 30653 100 31053
+rect 0 30133 100 30533
+rect 0 29333 100 30013
+rect 0 29057 100 29241
+rect 0 28769 100 28965
+rect 9900 31172 10000 31852
+rect 9900 30653 10000 31053
+rect 9900 30133 10000 30533
+rect 9900 29333 10000 30013
+rect 9900 29057 10000 29241
+rect 9900 28769 10000 28965
+rect 0 22024 100 28424
+rect 9900 22024 10000 28424
+rect 0 0 100 6800
+rect 9900 0 10000 6800
+<< obsm4 >>
+rect 0 31972 10000 32000
+rect 220 28649 9780 31972
+rect 0 28544 10000 28649
+rect 220 21904 9780 28544
+rect 0 6920 10000 21904
+rect 220 0 9780 6920
+<< metaltp >>
+rect 0 31172 100 31852
+rect 0 30653 100 31053
+rect 0 30133 100 30533
+rect 0 29333 100 30013
+rect 0 29057 100 29241
+rect 0 28769 100 28965
+rect 9900 31172 10000 31852
+rect 9900 30653 10000 31053
+rect 9900 30133 10000 30533
+rect 9900 29333 10000 30013
+rect 9900 29057 10000 29241
+rect 9900 28769 10000 28965
+rect 0 22024 100 28424
+rect 9900 22024 10000 28424
+rect 0 0 100 6800
+rect 9900 0 10000 6800
+<< obsmtp >>
+rect 0 31972 10000 32000
+rect 220 28649 9780 31972
+rect 0 28544 10000 28649
+rect 220 21904 9780 28544
+rect 0 6920 10000 21904
+rect 220 0 9780 6920
+<< metaltpl >>
+rect 0 31252 100 31852
+rect 0 30152 100 30752
+rect 0 28924 100 29652
+rect 0 22024 100 28424
+rect 9900 31252 10000 31852
+rect 9900 30152 10000 30752
+rect 9900 28924 10000 29652
+rect 9900 22024 10000 28424
+rect 0 0 100 6800
+rect 9900 0 10000 6800
+<< obsmtpl >>
+rect 600 21524 9400 32000
+rect 0 7300 10000 21524
+rect 600 0 9400 7300
+<< labels >>
+rlabel metaltpl 0 22024 100 28424 6 VDDO
+port 1 nsew power input
+rlabel metaltpl 9900 22024 10000 28424 6 VDDO
+port 1 nsew power input
+rlabel metaltp 9900 22024 10000 28424 6 VDDO
+port 1 nsew power input
+rlabel metaltp 9900 29057 10000 29241 6 VDDO
+port 1 nsew power input
+rlabel metaltp 0 22024 100 28424 6 VDDO
+port 1 nsew power input
+rlabel metaltp 0 29057 100 29241 6 VDDO
+port 1 nsew power input
+rlabel metal4 9900 29057 10000 29241 6 VDDO
+port 1 nsew power input
+rlabel metal4 9900 22024 10000 28424 6 VDDO
+port 1 nsew power input
+rlabel metal4 0 22024 100 28424 6 VDDO
+port 1 nsew power input
+rlabel metal4 0 29057 100 29241 6 VDDO
+port 1 nsew power input
+rlabel metal3 9900 29057 10000 29241 6 VDDO
+port 1 nsew power input
+rlabel metal3 9900 22024 10000 28424 6 VDDO
+port 1 nsew power input
+rlabel metal3 0 22024 100 28424 6 VDDO
+port 1 nsew power input
+rlabel metal3 0 29057 100 29241 6 VDDO
+port 1 nsew power input
+rlabel metal2 9900 29034 10000 29236 6 VDDO
+port 1 nsew power input
+rlabel metal2 9900 22448 10000 28360 6 VDDO
+port 1 nsew power input
+rlabel metal2 0 22448 100 28360 6 VDDO
+port 1 nsew power input
+rlabel metal2 0 29034 100 29236 6 VDDO
+port 1 nsew power input
+rlabel metaltp 9900 30653 10000 31053 6 VDDR
+port 2 nsew power input
+rlabel metaltp 0 30653 100 31053 6 VDDR
+port 2 nsew power input
+rlabel metal4 9900 30653 10000 31053 6 VDDR
+port 2 nsew power input
+rlabel metal4 0 30653 100 31053 6 VDDR
+port 2 nsew power input
+rlabel metal3 9900 30653 10000 31053 6 VDDR
+port 2 nsew power input
+rlabel metal3 0 30653 100 31053 6 VDDR
+port 2 nsew power input
+rlabel metal2 9900 30727 10000 31053 6 VDDR
+port 2 nsew power input
+rlabel metal2 0 30727 100 31053 6 VDDR
+port 2 nsew power input
+rlabel metaltpl 0 30152 100 30752 6 GNDR
+port 3 nsew ground input
+rlabel metaltpl 9900 30152 10000 30752 6 GNDR
+port 3 nsew ground input
+rlabel metaltp 9900 30133 10000 30533 6 GNDR
+port 3 nsew ground input
+rlabel metaltp 0 30133 100 30533 6 GNDR
+port 3 nsew ground input
+rlabel metal4 9900 30133 10000 30533 6 GNDR
+port 3 nsew ground input
+rlabel metal4 0 30133 100 30533 6 GNDR
+port 3 nsew ground input
+rlabel metal3 9900 30133 10000 30533 6 GNDR
+port 3 nsew ground input
+rlabel metal3 0 30133 100 30533 6 GNDR
+port 3 nsew ground input
+rlabel metal2 9900 30133 10000 30533 6 GNDR
+port 3 nsew ground input
+rlabel metal2 0 30133 100 30533 6 GNDR
+port 3 nsew ground input
+rlabel metaltpl 0 0 100 6800 6 GNDO
+port 4 nsew ground input
+rlabel metaltpl 0 28924 100 29652 6 GNDO
+port 4 nsew ground input
+rlabel metaltpl 9900 28924 10000 29652 6 GNDO
+port 4 nsew ground input
+rlabel metaltpl 9900 0 10000 6800 6 GNDO
+port 4 nsew ground input
+rlabel metaltp 9900 29333 10000 30013 6 GNDO
+port 4 nsew ground input
+rlabel metaltp 9900 28769 10000 28965 6 GNDO
+port 4 nsew ground input
+rlabel metaltp 9900 0 10000 6800 6 GNDO
+port 4 nsew ground input
+rlabel metaltp 0 29333 100 30013 6 GNDO
+port 4 nsew ground input
+rlabel metaltp 0 28769 100 28965 6 GNDO
+port 4 nsew ground input
+rlabel metaltp 0 0 100 6800 6 GNDO
+port 4 nsew ground input
+rlabel metal4 9900 28769 10000 28965 6 GNDO
+port 4 nsew ground input
+rlabel metal4 9900 29333 10000 30013 6 GNDO
+port 4 nsew ground input
+rlabel metal4 9900 0 10000 6800 6 GNDO
+port 4 nsew ground input
+rlabel metal4 0 0 100 6800 6 GNDO
+port 4 nsew ground input
+rlabel metal4 0 29333 100 30013 6 GNDO
+port 4 nsew ground input
+rlabel metal4 0 28769 100 28965 6 GNDO
+port 4 nsew ground input
+rlabel metal3 9900 28769 10000 28965 6 GNDO
+port 4 nsew ground input
+rlabel metal3 9900 29333 10000 30013 6 GNDO
+port 4 nsew ground input
+rlabel metal3 9900 0 10000 6800 6 GNDO
+port 4 nsew ground input
+rlabel metal3 0 0 100 6800 6 GNDO
+port 4 nsew ground input
+rlabel metal3 0 29333 100 30013 6 GNDO
+port 4 nsew ground input
+rlabel metal3 0 28769 100 28965 6 GNDO
+port 4 nsew ground input
+rlabel metal2 9900 28769 10000 28965 6 GNDO
+port 4 nsew ground input
+rlabel metal2 9900 29333 10000 30013 6 GNDO
+port 4 nsew ground input
+rlabel metal2 9900 0 10000 6400 6 GNDO
+port 4 nsew ground input
+rlabel metal2 0 0 100 6400 6 GNDO
+port 4 nsew ground input
+rlabel metal2 0 29333 100 30013 6 GNDO
+port 4 nsew ground input
+rlabel metal2 0 28769 100 28965 6 GNDO
+port 4 nsew ground input
+rlabel metaltpl 0 31252 100 31852 6 VDD
+port 5 nsew power input
+rlabel metaltpl 9900 31252 10000 31852 6 VDD
+port 5 nsew power input
+rlabel metaltp 9900 31172 10000 31852 6 VDD
+port 5 nsew power input
+rlabel metaltp 0 31172 100 31852 6 VDD
+port 5 nsew power input
+rlabel metal4 9900 31172 10000 31852 6 VDD
+port 5 nsew power input
+rlabel metal4 0 31172 100 31852 6 VDD
+port 5 nsew power input
+rlabel metal3 9900 31172 10000 31852 6 VDD
+port 5 nsew power input
+rlabel metal3 0 31172 100 31852 6 VDD
+port 5 nsew power input
+rlabel metal2 9900 31172 10000 31852 6 VDD
+port 5 nsew power input
+rlabel metal2 0 31172 100 31852 6 VDD
+port 5 nsew power input
+<< properties >>
+string LEFclass PAD
+string LEFsite io_site_F3V
+string LEFview TRUE
+string LEFsymmetry R90
+string FIXED_BBOX 0 0 10000 32000
+<< end >>

@@ -1,0 +1,22 @@
+magic
+tech EFXH018D
+timestamp 1523029302
+<< metal2 >>
+tri 0 856 104 960 se
+rect 104 856 424 960
+tri 424 856 528 960 sw
+rect 0 848 528 856
+rect 0 744 96 848
+tri 96 776 168 848 nw
+tri 368 792 424 848 ne
+tri 264 424 424 584 se
+rect 424 528 528 848
+tri 424 424 528 528 nw
+tri 104 264 264 424 se
+tri 264 264 424 424 nw
+tri 0 160 104 264 se
+rect 104 160 184 264
+tri 184 184 264 264 nw
+rect 0 104 184 160
+rect 0 0 528 104
+<< end >>

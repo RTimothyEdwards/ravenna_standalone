@@ -1,0 +1,19 @@
+Ravenna --- a full implementation of the PicoRV32 PicoSoC in X-Fab XH018.
+
+This directory contains the top-level module for the ravenna chip, with
+all components modeled in (standard or wreal) verilog.  No special flags
+to iverilog are required.
+
+Firmware is compiled from the .c files, one for each test.  Comments in
+the .c files specify what the tests are and how to interpret results.
+
+To run each testbench, compile the .c file into a hex target "firmware.hex",
+then run iverilog / vvp on "ravenna_tb.v".
+
+Documentation is in the doc/ directory of the raven project.
+
+NOTE:  To change memory size, select the appropriate memory IP block
+in ravenna.v and modify the include line and the four instantiations
+of the memory block.  Change ram_addr width to match.  Change ram_addr
+width in source/ravenna_soc.v as well as the definition of MEM_WORDS
+in the same file.

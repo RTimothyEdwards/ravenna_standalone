@@ -1,0 +1,12 @@
+saved_good state:
+
+   1. Set ring buffer between 0x30 and 0x0ffe inclusive
+   2. Read from ring buffer current position less one.
+
+This displays the amplitude data on the LEDs and does not
+freeze up.
+
+Incorrect behavior:  When it cycles back to the beginning
+of the ring buffer loop, the "current position less one"
+is outside of the ring buffer, so there's a "strobe"
+effect as the ring buffer cycles.

@@ -1,0 +1,60 @@
+magic
+tech EFXH018D
+timestamp 1513869238
+<< checkpaint >>
+rect -30000 -30000 59104 40000
+<< metal1 >>
+rect 0 9500 29104 10000
+rect 0 0 29104 500
+<< obsm1 >>
+rect 0 523 29104 9477
+<< metal2 >>
+rect 510 9920 548 10000
+rect 9004 9920 9042 10000
+rect 9124 9920 9162 10000
+rect 510 0 548 80
+rect 9004 0 9042 80
+rect 9124 0 9162 80
+<< obsm2 >>
+rect 0 9892 482 10000
+rect 576 9892 8976 10000
+rect 9190 9892 29104 10000
+rect 0 108 29104 9892
+rect 0 0 482 108
+rect 576 0 8976 108
+rect 9190 0 29104 108
+<< metal3 >>
+rect 0 9700 29104 10000
+rect 0 0 29104 500
+<< obsm3 >>
+rect 0 528 29104 9672
+<< labels >>
+rlabel metal3 0 9700 29104 10000 6 VDDA
+port 1 nsew power input
+rlabel metal1 0 9500 29104 10000 6 VDDA
+port 1 nsew power input
+rlabel metal3 0 0 29104 500 6 VSSA
+port 2 nsew ground input
+rlabel metal1 0 0 29104 500 6 VSSA
+port 2 nsew ground input
+rlabel metal2 510 0 548 80 6 EN
+port 3 nsew signal input
+rlabel metal2 510 9920 548 10000 6 EN
+port 3 nsew signal input
+rlabel metal2 9004 0 9042 80 6 VBGVTN
+port 4 nsew signal output
+rlabel metal2 9004 9920 9042 10000 6 VBGVTN
+port 4 nsew signal output
+rlabel metal2 9124 0 9162 80 6 VBGP
+port 5 nsew signal output
+rlabel metal2 9124 9920 9162 10000 6 VBGP
+port 5 nsew signal output
+<< properties >>
+string LEFclass CORE
+string LEFsite ana_std_33V
+string LEFview TRUE
+string LEFsymmetry X Y
+string FIXED_BBOX 0 0 29104 10000
+string GDS_FILE /ef/tech/XFAB.3/EFXH018D/libs.ref/gds/A_CELLS_3V3/abgpc01_3v3.gds
+string GDS_START 0
+<< end >>

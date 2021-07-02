@@ -1,0 +1,99 @@
+magic
+tech EFXH018D
+timestamp 1513868860
+<< metal1 >>
+rect 36 15490 336 15524
+rect 10664 15490 10964 15524
+rect 13824 15490 14124 15524
+rect 14154 15490 14454 15524
+rect 17812 15490 17892 15524
+rect 17992 15490 18292 15524
+rect 25649 15490 25949 15524
+<< obsm1 >>
+rect 0 15467 13 15524
+rect 359 15467 10641 15524
+rect 10987 15467 13801 15524
+rect 14477 15467 17789 15524
+rect 17915 15467 17969 15524
+rect 18315 15467 25626 15524
+rect 25972 15467 27078 15524
+rect 0 0 27078 15467
+<< metal2 >>
+rect 272 15490 306 15524
+rect 336 15490 370 15524
+rect 400 15490 434 15524
+rect 464 15490 498 15524
+rect 564 15490 598 15524
+rect 1394 15490 1428 15524
+rect 12027 15490 12057 15524
+rect 14860 15494 14890 15524
+rect 19632 15490 19666 15524
+rect 19716 15490 19750 15524
+<< obsm2 >>
+rect 0 15462 244 15524
+rect 526 15462 536 15524
+rect 626 15462 1366 15524
+rect 1456 15462 10664 15524
+rect 10992 15462 11999 15524
+rect 12085 15462 13796 15524
+rect 14482 15466 14832 15524
+rect 14918 15466 17784 15524
+rect 14482 15462 17784 15466
+rect 17920 15462 17964 15524
+rect 18252 15462 19604 15524
+rect 19778 15462 25621 15524
+rect 25977 15462 27078 15524
+rect 0 0 27078 15462
+<< obsm3 >>
+rect 0 15502 11999 15524
+rect 12085 15502 14832 15524
+rect 0 15466 14832 15502
+rect 14918 15466 27078 15524
+rect 0 0 27078 15466
+<< obsm4 >>
+rect 0 0 27078 15524
+<< obsmtp >>
+rect 0 0 27078 15524
+<< labels >>
+rlabel metal2 14860 15494 14890 15524 6 REF
+port 1 nsew signal input
+rlabel metal2 564 15490 598 15524 6 B_VCO
+port 2 nsew signal input
+rlabel metal2 19716 15490 19750 15524 6 B_CP
+port 3 nsew signal input
+rlabel metal1 13824 15490 14124 15524 6 VDDD
+port 4 nsew power input
+rlabel metal1 14154 15490 14454 15524 6 VSSD
+port 5 nsew ground input
+rlabel metal2 464 15490 498 15524 6 B<3>
+port 6 nsew signal input
+rlabel metal2 400 15490 434 15524 6 B<2>
+port 7 nsew signal input
+rlabel metal2 336 15490 370 15524 6 B<1>
+port 8 nsew signal input
+rlabel metal2 272 15490 306 15524 6 B<0>
+port 9 nsew signal input
+rlabel metal1 17812 15490 17892 15524 6 VCO_IN
+port 10 nsew signal input
+rlabel metal2 12027 15490 12057 15524 6 CLK
+port 11 nsew signal output
+rlabel metal1 36 15490 336 15524 6 VSSA
+port 12 nsew ground input
+rlabel metal1 25649 15490 25949 15524 6 VSSA
+port 12 nsew ground input
+rlabel metal1 10664 15490 10964 15524 6 VDDA
+port 13 nsew power input
+rlabel metal1 17992 15490 18292 15524 6 VDDA
+port 13 nsew power input
+rlabel metal2 19632 15490 19666 15524 6 EN_CP
+port 14 nsew signal input
+rlabel metal2 1394 15490 1428 15524 6 EN_VCO
+port 15 nsew signal input
+<< properties >>
+string LEFclass BLOCK
+string LEFview TRUE
+string LEFsymmetry X Y R90
+string FIXED_BBOX 0 0 27078 15524
+string GDS_FILE /ef/tech/XFAB.3/EFXH018D/libs.ref/gds/A_CELLS_1V8/apllc03_1v8.gds
+string GDS_START 0
+<< end >>

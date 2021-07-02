@@ -1,0 +1,10 @@
+Note:  In this testbench, unlike the others, the C program is not
+driving the simulation.  The C program is just copied from the UART
+testbench and gives something to fill the SPI flash with.  The
+program is run from the testbench verilog and drives the chip into
+"pass_thru" mode to check that it can read data directly off of the
+SPI flash through the housekeeping SPI, bypassing the processor.
+During pass-thru mode, the processor should be held in reset and
+all pins should be inputs or tri-stated except for the flash SPI
+pins, which should be copying signals from and to the housekeeping
+SPI.

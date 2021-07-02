@@ -1,0 +1,35 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1529525674
+<< checkpaint >>
+rect -6000 -6000 6560 6896
+<< metal1 >>
+rect 0 816 560 976
+rect 466 470 532 652
+rect 0 -80 560 80
+<< obsm1 >>
+rect 246 700 314 816
+rect 36 490 303 547
+rect 36 246 186 314
+rect 257 312 303 490
+rect 356 424 424 446
+rect 356 376 524 424
+rect 36 140 94 246
+rect 257 244 420 312
+rect 246 80 314 196
+rect 466 140 524 376
+<< labels >>
+rlabel metal1 466 470 532 652 6 Q
+port 1 nsew signal output
+rlabel metal1 0 -80 560 80 8 gnd
+port 2 nsew ground bidirectional
+rlabel metal1 0 816 560 976 6 vdd3
+port 3 nsew power bidirectional
+<< properties >>
+string LEFclass CORE
+string LEFsite core_3v
+string LEFview TRUE
+string LEFsymmetry X Y
+string FIXED_BBOX 0 0 560 896
+<< end >>

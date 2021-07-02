@@ -1,0 +1,369 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1564059159
+<< checkpaint >>
+rect 160826 414654 305617 688409
+rect 96400 290524 112273 316546
+rect 98684 279352 156840 283718
+rect 163196 279352 243730 406727
+rect 258260 279352 338794 406727
+rect 349722 349348 417974 419641
+rect 348282 339986 434054 349348
+rect 346842 335544 434054 339986
+rect 435364 335544 927336 413510
+rect 346842 283130 927336 335544
+rect 347562 282804 927336 283130
+rect 94181 250722 338794 279352
+rect 344944 260804 927336 282804
+rect 344944 254496 431204 260804
+rect 94181 248107 302457 250722
+rect -2176 147818 78358 154005
+rect 94181 147818 341494 248107
+rect 344944 246847 388060 254496
+rect 388088 246850 431204 254496
+rect -2280 92102 341494 147818
+rect -2280 89080 302457 92102
+rect 343960 90842 424494 246847
+rect 381106 89532 390186 89984
+rect -2280 89002 308530 89080
+rect -2280 88908 266330 89002
+rect -2280 85164 157547 88908
+rect 217696 88426 266330 88908
+rect -2280 82680 159208 85164
+rect -8206 63414 159208 82680
+rect -8206 57198 160860 63414
+rect 167452 61848 210568 86944
+rect 213326 86040 266330 88426
+rect 212062 63272 266330 86040
+rect 270372 88628 293052 89002
+rect 295230 88628 308530 89002
+rect 381106 88628 398136 89532
+rect 270372 65080 308530 88628
+rect 335908 88580 353508 88628
+rect 289354 64628 302654 65080
+rect 309694 64628 353508 88580
+rect 354890 65984 398136 88628
+rect 399828 78188 409358 85948
+rect 409508 79228 419038 87420
+rect 409508 78830 419782 79228
+rect 399828 77358 409842 78188
+rect 400312 69598 409842 77358
+rect 410252 70638 419782 78830
+rect 354890 64628 381290 65984
+rect 388336 65532 398136 65984
+rect 410252 64680 417462 70638
+rect 435364 69710 927336 260804
+rect 309694 63272 338054 64628
+rect 212062 62040 253696 63272
+rect 213326 61848 253696 62040
+rect 167452 61220 253696 61848
+rect 161684 59526 253696 61220
+rect 161684 57456 169640 59526
+rect -8206 51242 158978 57198
+rect 161684 55004 170580 57456
+rect -8206 47632 157547 51242
+rect 162624 51240 170580 55004
+rect 172346 53436 180302 59526
+rect 183006 53122 190962 59338
+rect 193040 55004 208522 59526
+rect 209974 55704 253696 59526
+rect 209974 55632 249326 55704
+rect 193040 53436 200996 55004
+rect 213326 52426 249326 55632
+rect -2280 -2488 157547 47632
+rect -2000 -3320 13512 -2488
+rect 3982 -3710 13512 -3320
+use XCPF_136X32DP128_VD03  nvram_cp ~/design/ip/XCPF_136X32DP128_VD03/1/maglef
+timestamp 1555448811
+transform 1 0 351722 0 1 347784
+box 0 0 64252 69857
+use markings  markings_0 markings
+timestamp 1555546719
+transform 1 0 167938 0 1 71603
+box -69538 220921 -57665 242943
+use XNVR_136X32P128_VD01  nvram ~/design/ip/XNVR_136X32P128_VD01/1/maglef
+timestamp 1555448905
+transform 1 0 348842 0 1 285130
+box 0 0 81772 52856
+use apllc03_1v8  pll /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_1V8
+timestamp 1513868860
+transform 1 0 100684 0 1 250670
+box 0 0 54156 31048
+use aadcc01_3v3  adc1 /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869217
+transform 1 0 346944 0 1 248304
+box 0 0 39116 32500
+use aadcc01_3v3  adc0
+timestamp 1513869217
+transform 1 0 390088 0 1 248850
+box 0 0 39116 32500
+use ravenna_soc  soc
+timestamp 1564018025
+transform 1 0 525014 0 1 110290
+box -406 -394 202762 185956
+use XSPRAMBLP_4096X32_M8P  XSPRAMBLP_4096X32_M8P_0 ~/design/ip/XSPRAMBLP_4096X32_M8P/1/maglef
+timestamp 1562789036
+transform 1 0 732448 0 1 110078
+box -120 0 140671 269755
+use abgpc01_3v3  bandgap /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869238
+transform 1 0 99000 0 1 63164
+box 0 0 58208 20000
+use LS_3VX2  temp_level ~/design/ip/LS_3VX2/8/maglef
+timestamp 1526911224
+transform 1 0 97284 0 1 61716
+box 1992 -1320 3956 -168
+use IN_3VX2  reg_enb_inv /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/D_CELLS_3V
+timestamp 1529525674
+transform 1 0 103372 0 1 60656
+box 0 0 448 896
+use LOGIC0_3V  prog_ground /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/D_CELLS_3V
+timestamp 1529525674
+transform 1 0 105116 0 1 60656
+box 0 0 560 896
+use LOGIC1_3V  prog_power /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/D_CELLS_3V
+timestamp 1529525674
+transform 1 0 107032 0 1 60656
+box 0 0 560 896
+use BU_3VX2  overtemp_level /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/D_CELLS_3V
+timestamp 1529525674
+transform 1 0 108776 0 1 60656
+box 0 0 672 896
+use adacc01_3v3  dac /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869421
+transform 1 0 169452 0 1 61526
+box 0 0 39116 23418
+use aopac01_3v3  opamp /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869437
+transform 1 0 214062 0 1 64040
+box 0 0 30800 20000
+use acsoc04_1v8  pll_bias /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_1V8
+timestamp 1513868641
+transform 1 0 251130 0 1 65272
+box 0 0 13200 22000
+use atmpc01_3v3  temp /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869651
+transform 1 0 272372 0 1 67080
+box 0 0 18680 20000
+use acsoc02_3v3  opamp_bias /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869399
+transform 1 0 297230 0 1 67080
+box 0 0 9300 20000
+use ravenna_spi  spi
+timestamp 1558280893
+transform 1 0 311946 0 1 65608
+box -252 -336 24108 20972
+use acsoc01_3v3  comp_bias /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869363
+transform 1 0 337908 0 1 66628
+box 0 0 13600 20000
+use arcoc01_3v3  rcosc /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869549
+transform 1 0 356890 0 1 66628
+box 0 0 22400 20000
+use aporc02_3v3  por /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869493
+transform 1 0 383106 0 1 67984
+box 0 0 5080 20000
+use acmpc01_3v3  comparator /ef/tech/XFAB.3/EFXH018D/libs.ref/maglef/A_CELLS_3V3
+timestamp 1513869319
+transform 1 0 390336 0 1 67532
+box 0 0 5800 20000
+use AMUX4_3V  comp_pinput_mux ~/design/ip/AMUX4_3V/11/maglef
+timestamp 1527118791
+transform 1 0 395846 0 1 81068
+box 5982 -1710 11512 2880
+use AMUX4_3V  adc1_input_mux
+timestamp 1527118791
+transform 1 0 405526 0 1 82540
+box 5982 -1710 11512 2880
+use AMUX4_3V  comp_ninput_mux
+timestamp 1527118791
+transform 1 0 396330 0 1 73308
+box 5982 -1710 11512 2880
+use AMUX4_3V  adc0_input_mux
+timestamp 1527118791
+transform 1 0 406270 0 1 74348
+box 5982 -1710 11512 2880
+use ravenna_padframe  ravenna_padframe_0
+timestamp 1555546887
+transform 1 0 609256 0 1 91158
+box -171892 -19448 316080 320352
+use AMUX2_3V  analog_out_mux ~/design/ip/AMUX2_3V/10/maglef
+timestamp 1527162843
+transform 1 0 406558 0 1 67240
+box 5694 -560 8904 2552
+use LOGIC0_3V  spi_config_zero
+timestamp 1529525674
+transform 1 0 121352 0 1 60520
+box 0 0 560 896
+use BU_3VX2  por_level
+timestamp 1529525674
+transform 1 0 121352 0 1 60520
+box 0 0 672 896
+use BU_3VX2  comp_out_level
+timestamp 1529525674
+transform 1 0 154904 0 1 60518
+box 0 0 672 896
+use LS_3VX2  rcosc_ena_level
+timestamp 1526911224
+transform 1 0 121352 0 1 60520
+box 1992 -1320 3956 -168
+use LOGIC0_3V  ground_digital
+timestamp 1529525674
+transform 1 0 132012 0 1 58952
+box 0 0 560 896
+use BU_3VX2  rcosc_out_level
+timestamp 1529525674
+transform 1 0 132012 0 1 58952
+box 0 0 672 896
+use LS_3VX2  comp_ena_level
+timestamp 1526911224
+transform 1 0 132012 0 1 58952
+box 1992 -1320 3956 -168
+use BU_3VX2  xtal_out_level
+timestamp 1529525674
+transform 1 0 143616 0 1 58636
+box 0 0 672 896
+use LS_3VX2  opamp_bias_ena_level
+timestamp 1526911224
+transform 1 0 154904 0 1 60518
+box 1992 -1320 3956 -168
+use LS_3VX2  bg_ena_level
+timestamp 1526911224
+transform 1 0 143616 0 1 58636
+box 1992 -1320 3956 -168
+use BU_3VX2  adc1_data_level
+timestamp 1529525674
+transform 1 0 163684 0 1 58324
+box 0 0 672 896
+use BU_3VX2  pass_thru_sck_level
+timestamp 1529525674
+transform 1 0 202566 0 1 58324
+box 0 0 672 896
+use BU_3VX2  pass_thru_sdi_level
+timestamp 1529525674
+transform 1 0 211974 0 1 58952
+box 0 0 672 896
+use LS_3VX2  opamp_ena_level
+timestamp 1526911224
+transform 1 0 163684 0 1 58324
+box 1992 -1320 3956 -168
+use BU_3VX2  pll_trim_level
+timestamp 1529525674
+transform 1 0 174346 0 1 56756
+box 0 0 672 896
+use BU_3VX2  pass_thru_level
+timestamp 1529525674
+transform 1 0 99270 0 1 54006
+box 0 0 672 896
+use BU_3VX2  spi_pll_bypass_level
+timestamp 1529525674
+transform 1 0 100054 0 1 54004
+box 0 0 672 896
+use BU_3VX2  spi_reset_level
+timestamp 1529525674
+transform 1 0 100912 0 1 54034
+box 0 0 672 896
+use BU_3VX2  spi_mask_rev_level
+timestamp 1529525674
+transform 1 0 101790 0 1 54064
+box 0 0 672 896
+use BU_3VX2  spi_prod_id_level
+timestamp 1529525674
+transform 1 0 102630 0 1 54084
+box 0 0 672 896
+use BU_3VX2  spi_mfgr_id_level
+timestamp 1529525674
+transform 1 0 103478 0 1 54104
+box 0 0 672 896
+use BU_3VX2  spi_reg_ena_level
+timestamp 1529525674
+transform 1 0 104356 0 1 54124
+box 0 0 672 896
+use BU_3VX2  spi_xtal_ena_level
+timestamp 1529525674
+transform 1 0 105456 0 1 54204
+box 0 0 672 896
+use BU_3VX2  spi_config_level
+timestamp 1529525674
+transform 1 0 106554 0 1 54212
+box 0 0 672 896
+use BU_3VX2  SCK_core_level
+timestamp 1529525674
+transform 1 0 107384 0 1 54204
+box 0 0 672 896
+use BU_3VX2  adc1_done_level
+timestamp 1529525674
+transform 1 0 126056 0 1 54876
+box 0 0 672 896
+use BU_3VX2  adc0_data_level
+timestamp 1529525674
+transform 1 0 135776 0 1 55502
+box 0 0 672 896
+use BU_3VX2  adc0_done_level
+timestamp 1529525674
+transform 1 0 145810 0 1 55502
+box 0 0 672 896
+use LS_3VX2  dac_ena_level
+timestamp 1526911224
+transform 1 0 126056 0 1 54876
+box 1992 -1320 3956 -168
+use LS_3VX2  dac_value_level
+timestamp 1526911224
+transform 1 0 135776 0 1 55502
+box 1992 -1320 3956 -168
+use LS_3VX2  adc1_convert_level
+timestamp 1526911224
+transform 1 0 145810 0 1 55502
+box 1992 -1320 3956 -168
+use BU_3VX2  spi_irq_level
+timestamp 1529525674
+transform 1 0 153022 0 1 54562
+box 0 0 672 896
+use BU_3VX2  pll_bias_ena_level
+timestamp 1529525674
+transform 1 0 164624 0 1 54560
+box 0 0 672 896
+use LS_3VX2  adc0_convert_level
+timestamp 1526911224
+transform 1 0 174346 0 1 56756
+box 1992 -1320 3956 -168
+use BU_3VX2  pll_cp_ena_level
+timestamp 1529525674
+transform 1 0 185006 0 1 56442
+box 0 0 672 896
+use BU_3VX2  pll_vco_ena_level
+timestamp 1529525674
+transform 1 0 195040 0 1 56756
+box 0 0 672 896
+use LS_3VX2  pass_thru_sdo_level
+timestamp 1526911224
+transform 1 0 202566 0 1 58324
+box 1992 -1320 3956 -168
+use LS_3VX2  spi_trap_level
+timestamp 1526911224
+transform 1 0 211974 0 1 58952
+box 1992 -1320 3956 -168
+use LS_3VX2  adc0_clk_level
+timestamp 1526911224
+transform 1 0 185006 0 1 56442
+box 1992 -1320 3956 -168
+use LS_3VX2  adc0_ena_level
+timestamp 1526911224
+transform 1 0 195040 0 1 56756
+box 1992 -1320 3956 -168
+use BU_3VX2  pass_thru_csb_level
+timestamp 1529525674
+transform 1 0 223262 0 1 55816
+box 0 0 672 896
+use LS_3VX2  adc1_clk_level
+timestamp 1526911224
+transform 1 0 153022 0 1 54562
+box 1992 -1320 3956 -168
+use LS_3VX2  adc1_ena_level
+timestamp 1526911224
+transform 1 0 164624 0 1 54560
+box 1992 -1320 3956 -168
+<< end >>

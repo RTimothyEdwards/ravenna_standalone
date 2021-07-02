@@ -1,0 +1,41 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1555546719
+use _alphabet_R  _alphabet_R_0
+timestamp 1494891594
+transform 1 0 -69403 0 1 228445
+box 0 0 1056 1920
+use _alphabet_A  _alphabet_A_0
+timestamp 1494891594
+transform 1 0 -68152 0 1 228445
+box 0 0 1056 1920
+use _alphabet_V  _alphabet_V_0
+timestamp 1494891594
+transform 1 0 -66915 0 1 228429
+box 0 16 1056 1936
+use _alphabet_E  _alphabet_E_0
+timestamp 1494891594
+transform 1 0 -65695 0 1 228446
+box 0 0 1056 1920
+use _alphabet_N  _alphabet_N_0
+timestamp 1523029302
+transform 1 0 -64474 0 1 228445
+box 0 0 1056 1952
+use _alphabet_N  _alphabet_N_1
+timestamp 1523029302
+transform 1 0 -63248 0 1 228445
+box 0 0 1056 1952
+use _alphabet_A  _alphabet_A_1
+timestamp 1494891594
+transform 1 0 -62036 0 1 228445
+box 0 0 1056 1920
+use _alphabet_V  _alphabet_V_1
+timestamp 1494891594
+transform 1 0 -59830 0 1 228435
+box 0 16 1056 1936
+use _alphabet_1  _alphabet_1_0
+timestamp 1494891594
+transform 1 0 -58625 0 1 228449
+box 64 0 960 1920
+<< end >>

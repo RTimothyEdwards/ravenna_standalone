@@ -1,0 +1,118 @@
+magic
+tech EFXH018D
+timestamp 1513869217
+<< checkpaint >>
+rect -30000 -30000 49558 46250
+<< obsm1 >>
+rect 1827 11341 19294 16250
+rect 1827 10937 19558 11341
+rect 0 4130 19558 10937
+rect 0 0 12608 4130
+<< metal2 >>
+rect 2058 16210 3006 16250
+rect 18306 16210 19254 16250
+rect 19518 10980 19558 11280
+rect 12568 3810 12608 4110
+rect 12568 3650 12608 3750
+rect 0 248 40 406
+rect 0 48 40 206
+<< obsm2 >>
+rect 1827 16182 2030 16250
+rect 3034 16182 18278 16250
+rect 1827 11341 19294 16182
+rect 1827 11308 19558 11341
+rect 1827 10952 19490 11308
+rect 1827 10937 19558 10952
+rect 0 4138 19558 10937
+rect 0 3622 12540 4138
+rect 12636 4130 19558 4138
+rect 0 434 12608 3622
+rect 68 0 12608 434
+<< metal3 >>
+rect 906 0 934 28
+rect 967 0 995 28
+rect 1028 0 1056 28
+rect 1089 0 1117 28
+rect 1150 0 1178 28
+rect 1211 0 1239 28
+rect 1272 0 1300 28
+rect 1333 0 1361 28
+rect 1394 0 1422 28
+rect 1455 0 1483 28
+rect 1516 0 1544 28
+rect 1577 0 1605 28
+rect 1638 0 1666 28
+rect 1699 0 1727 28
+<< obsm3 >>
+rect 1827 11341 19294 16250
+rect 1827 10937 19558 11341
+rect 0 4130 19558 10937
+rect 0 56 12608 4130
+rect 0 0 878 56
+rect 1755 0 12608 56
+rect 0 0 878 56
+<< obsm4 >>
+rect 1827 11341 19294 16250
+rect 1827 10937 19558 11341
+rect 0 4130 19558 10937
+rect 0 74 12608 4130
+rect 0 0 860 74
+rect 1773 0 12608 74
+<< obsmtp >>
+rect 1827 11341 19294 16250
+rect 1827 10937 19558 11341
+rect 0 4130 19558 10937
+rect 0 74 12608 4130
+rect 0 0 860 74
+rect 1773 0 12608 74
+<< labels >>
+rlabel metal2 0 248 40 406 6 VDD
+port 1 nsew power input
+rlabel metal3 1699 0 1727 28 6 EOC
+port 2 nsew signal output
+rlabel metal3 1638 0 1666 28 6 EN
+port 3 nsew signal input
+rlabel metal3 1577 0 1605 28 6 START
+port 4 nsew signal input
+rlabel metal3 1516 0 1544 28 6 CLK
+port 5 nsew signal input
+rlabel metal3 1455 0 1483 28 6 D<0>
+port 6 nsew signal output
+rlabel metal3 1394 0 1422 28 6 D<1>
+port 7 nsew signal output
+rlabel metal3 1333 0 1361 28 6 D<2>
+port 8 nsew signal output
+rlabel metal3 1272 0 1300 28 6 D<3>
+port 9 nsew signal output
+rlabel metal3 1211 0 1239 28 6 D<4>
+port 10 nsew signal output
+rlabel metal3 1150 0 1178 28 6 D<5>
+port 11 nsew signal output
+rlabel metal3 1089 0 1117 28 6 D<6>
+port 12 nsew signal output
+rlabel metal3 1028 0 1056 28 6 D<7>
+port 13 nsew signal output
+rlabel metal3 967 0 995 28 6 D<8>
+port 14 nsew signal output
+rlabel metal3 906 0 934 28 6 D<9>
+port 15 nsew signal output
+rlabel metal2 12568 3650 12608 3750 6 VIN
+port 16 nsew signal input
+rlabel metal2 18306 16210 19254 16250 6 VREFH
+port 17 nsew signal input
+rlabel metal2 2058 16210 3006 16250 6 VREFL
+port 18 nsew signal input
+rlabel metal2 19518 10980 19558 11280 6 VSSA
+port 19 nsew ground input
+rlabel metal2 12568 3810 12608 4110 6 VDDA
+port 20 nsew power input
+rlabel metal2 0 48 40 206 6 VSS
+port 21 nsew ground input
+<< properties >>
+string LEFclass BLOCK
+string LEFview TRUE
+string LEFsymmetry X Y R90
+string FIXED_BBOX 0 0 19558 16250
+string GDS_FILE /ef/tech/XFAB.3/EFXH018D/libs.ref/gds/A_CELLS_3V3/aadcc01_3v3.gds
+string GDS_START 0
+<< end >>

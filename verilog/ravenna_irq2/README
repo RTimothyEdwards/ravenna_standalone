@@ -1,0 +1,14 @@
+ravenna_irq2:
+
+This testbench should work exactly like ravenna_irq.  However, some modifications
+have been made to support the tensorflow lite micro_speech example, including:
+
+(1) a memory location to hold the address of the start of the ring buffer
+(2) a timestamp in (approximately) microseconds
+(3) a copy from the buffer low end to an area above the buffer so that
+    tensorflow requests for a block of data that wraps around can be passed
+    back as a single, non-wrapped block.
+
+(4) The RAM section in sections.lds has been moved forward to 0x800 to
+    effectively reserve the area used by the ring buffer and prevent it from
+    being used by the compiler.

@@ -1,0 +1,79 @@
+magic
+tech EFXH018D
+magscale 1 2
+timestamp 1513869319
+<< checkpaint >>
+rect -60000 -60000 65800 80000
+<< metal1 >>
+rect 0 19000 5800 20000
+rect 0 0 5800 1000
+<< obsm1 >>
+rect 0 1046 5800 18954
+<< metal2 >>
+rect 450 19940 510 20000
+rect 625 19940 685 20000
+rect 2505 19940 2565 20000
+rect 5050 19940 5110 20000
+rect 5290 19940 5350 20000
+rect 450 0 510 60
+rect 625 0 685 60
+rect 2505 0 2565 60
+rect 5050 0 5110 60
+rect 5290 0 5350 60
+<< obsm2 >>
+rect 0 19884 394 20000
+rect 566 19884 569 20000
+rect 741 19884 2449 20000
+rect 2621 19884 4994 20000
+rect 5166 19884 5234 20000
+rect 5406 19884 5800 20000
+rect 0 116 5800 19884
+rect 0 0 394 116
+rect 566 0 569 116
+rect 741 0 2449 116
+rect 2621 0 4994 116
+rect 5166 0 5234 116
+rect 5406 0 5800 116
+<< metal3 >>
+rect 0 19400 5800 20000
+rect 0 0 5800 1000
+<< obsm3 >>
+rect 0 1056 5800 19344
+<< labels >>
+rlabel metal2 450 19940 510 20000 6 IBN
+port 1 nsew analog input
+rlabel metal2 450 0 510 60 6 IBN
+port 1 nsew analog input
+rlabel metal2 625 19940 685 20000 6 INP
+port 2 nsew analog input
+rlabel metal2 625 0 685 60 6 INP
+port 2 nsew analog input
+rlabel metal2 2505 19940 2565 20000 6 INN
+port 3 nsew analog input
+rlabel metal2 2505 0 2565 60 6 INN
+port 3 nsew analog input
+rlabel metal2 5050 19940 5110 20000 6 EN
+port 4 nsew analog input
+rlabel metal2 5050 0 5110 60 6 EN
+port 4 nsew analog input
+rlabel metal2 5290 19940 5350 20000 6 OUT
+port 5 nsew analog output
+rlabel metal2 5290 0 5350 60 6 OUT
+port 5 nsew analog output
+rlabel metal3 0 19400 5800 20000 6 VDDA
+port 6 nsew power input
+rlabel metal1 0 19000 5800 20000 6 VDDA
+port 6 nsew power input
+rlabel metal3 0 0 5800 1000 6 VSSA
+port 7 nsew ground input
+rlabel metal1 0 0 5800 1000 6 VSSA
+port 7 nsew ground input
+<< properties >>
+string LEFclass CORE
+string LEFsite ana_std_33V
+string LEFview TRUE
+string LEFsymmetry X Y
+string FIXED_BBOX 0 0 5800 20000
+string GDS_FILE /ef/tech/XFAB.3/EFXH018D/libs.ref/gds/A_CELLS_3V3/acmpc01_3v3.gds
+string GDS_START 0
+<< end >>

@@ -1,0 +1,54 @@
+magic
+tech EFXH018D
+timestamp 1513869651
+<< checkpaint >>
+rect -30000 -30000 39340 40000
+<< metal1 >>
+rect 0 9500 9340 10000
+rect 0 0 9340 500
+<< obsm1 >>
+rect 0 523 9340 9477
+<< metal2 >>
+rect 8970 9800 9000 10000
+rect 9090 9800 9120 10000
+rect 8970 0 9000 200
+rect 9090 0 9120 200
+<< obsm2 >>
+rect 0 9772 8942 10000
+rect 9028 9772 9062 10000
+rect 9148 9772 9340 10000
+rect 0 228 9340 9772
+rect 0 0 8942 228
+rect 9028 0 9062 228
+rect 9148 0 9340 228
+<< metal3 >>
+rect 0 9700 9340 10000
+rect 0 0 9340 500
+<< obsm3 >>
+rect 0 528 9340 9672
+<< labels >>
+rlabel metal2 9090 0 9120 200 6 OVT
+port 1 nsew signal output
+rlabel metal2 9090 9800 9120 10000 6 OVT
+port 1 nsew signal output
+rlabel metal2 8970 0 9000 200 6 EN
+port 2 nsew signal input
+rlabel metal2 8970 9800 9000 10000 6 EN
+port 2 nsew signal input
+rlabel metal1 0 0 9340 500 6 VSSA
+port 3 nsew ground input
+rlabel metal3 0 0 9340 500 6 VSSA
+port 3 nsew ground input
+rlabel metal1 0 9500 9340 10000 6 VDDA
+port 4 nsew power input
+rlabel metal3 0 9700 9340 10000 6 VDDA
+port 4 nsew power input
+<< properties >>
+string LEFclass CORE
+string LEFsite ana_std_33V
+string LEFview TRUE
+string LEFsymmetry X Y
+string FIXED_BBOX 0 0 9340 10000
+string GDS_FILE /ef/tech/XFAB.3/EFXH018D/libs.ref/gds/A_CELLS_3V3/atmpc01_3v3.gds
+string GDS_START 0
+<< end >>

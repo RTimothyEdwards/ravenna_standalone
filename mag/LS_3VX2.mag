@@ -1,0 +1,115 @@
+magic
+tech EFXH018A
+timestamp 1526911224
+<< checkpaint >>
+rect -4 -1660 2978 916
+<< metal1 >>
+rect 1039 -188 1935 -108
+rect 1056 -248 1287 -211
+rect 1317 -247 1365 -224
+rect 1504 -247 1537 -188
+rect 1691 -238 1731 -188
+rect 1056 -273 1162 -248
+rect 1317 -271 1340 -247
+rect 1185 -294 1340 -271
+rect 1185 -334 1217 -294
+rect 1120 -362 1217 -334
+rect 1120 -376 1172 -362
+rect 1105 -419 1172 -376
+rect 1786 -318 1819 -262
+rect 1881 -292 1914 -188
+rect 1786 -359 1859 -318
+rect 1152 -556 1184 -488
+rect 1311 -556 1354 -496
+rect 1827 -453 1859 -359
+rect 1503 -556 1538 -477
+rect 1788 -490 1859 -453
+rect 1693 -556 1728 -492
+rect 1788 -528 1821 -490
+rect 1883 -556 1915 -468
+rect 1039 -636 1935 -556
+<< obsm1 >>
+rect 1363 -293 1678 -270
+rect 1057 -353 1095 -296
+rect 1363 -317 1386 -293
+rect 1057 -442 1081 -353
+rect 1240 -353 1386 -317
+rect 1409 -339 1571 -316
+rect 1409 -347 1439 -339
+rect 1198 -425 1339 -392
+rect 1198 -442 1221 -425
+rect 1055 -465 1221 -442
+rect 1363 -448 1386 -353
+rect 1055 -524 1093 -465
+rect 1246 -471 1386 -448
+rect 1412 -448 1439 -347
+rect 1468 -431 1501 -362
+rect 1538 -408 1571 -339
+rect 1595 -341 1631 -316
+rect 1595 -431 1620 -341
+rect 1655 -380 1678 -293
+rect 1643 -423 1678 -380
+rect 1712 -419 1800 -382
+rect 1468 -446 1620 -431
+rect 1719 -446 1748 -419
+rect 1246 -527 1280 -471
+rect 1412 -527 1442 -448
+rect 1468 -454 1748 -446
+rect 1597 -469 1748 -454
+rect 1597 -528 1632 -469
+<< labels >>
+rlabel metal1 1056 -273 1162 -248 8 VDD1V8
+port 1 nsew
+rlabel metal1 1056 -248 1287 -211 8 VDD1V8
+port 1 nsew
+rlabel metal1 1039 -636 1935 -556 8 VSSA
+port 2 nsew
+rlabel metal1 1883 -556 1915 -468 8 VSSA
+port 2 nsew
+rlabel metal1 1693 -556 1728 -492 8 VSSA
+port 2 nsew
+rlabel metal1 1503 -556 1538 -477 8 VSSA
+port 2 nsew
+rlabel metal1 1311 -556 1354 -496 8 VSSA
+port 2 nsew
+rlabel metal1 1152 -556 1184 -488 8 VSSA
+port 2 nsew
+rlabel metal1 1881 -292 1914 -188 8 VDD3V3
+port 3 nsew
+rlabel metal1 1691 -238 1731 -188 8 VDD3V3
+port 3 nsew
+rlabel metal1 1504 -247 1537 -188 8 VDD3V3
+port 3 nsew
+rlabel metal1 1039 -188 1935 -108 8 VDD3V3
+port 3 nsew
+rlabel metal1 1105 -419 1172 -376 8 A
+port 4 nsew
+rlabel metal1 1120 -376 1172 -362 8 A
+port 4 nsew
+rlabel metal1 1120 -362 1217 -334 8 A
+port 4 nsew
+rlabel metal1 1185 -334 1217 -294 8 A
+port 4 nsew
+rlabel metal1 1185 -294 1340 -271 8 A
+port 4 nsew
+rlabel metal1 1317 -271 1340 -247 8 A
+port 4 nsew
+rlabel metal1 1317 -247 1365 -224 8 A
+port 4 nsew
+rlabel metal1 1788 -528 1821 -490 8 Q
+port 5 nsew
+rlabel metal1 1788 -490 1859 -453 8 Q
+port 5 nsew
+rlabel metal1 1827 -453 1859 -359 8 Q
+port 5 nsew
+rlabel metal1 1786 -359 1859 -318 8 Q
+port 5 nsew
+rlabel metal1 1786 -318 1819 -262 8 Q
+port 5 nsew
+<< properties >>
+string LEFview TRUE
+string FIXED_BBOX 996 -660 1978 -84
+string GDS_FILE ~/design/ip/LS_3VX2/8.0/gds/LS_3VX2.gds
+string GDS_START 106
+string GDS_END 10670
+<< end >>

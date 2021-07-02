@@ -1,0 +1,35 @@
+hello_world:
+
+Testbench used to test the hello_world example from tensorflow.  The final
+version of this put the Digilent MIC3 board audio sampling together with
+the hello_world so that both run at the same time, as a proof of concept
+prior to running the micro_speech example (since hello_world was known to
+be working).
+
+Main issue was the failure of hello_world when the audio sampling was
+added.  This error was traced to the simple act of moving the SRAM start
+forward from zero to make room for the audio data buffer.  In fact, it
+would fail even if the SRAM start was moved forward by only 1 word.
+However, it raised a trap state on the chip, and the trap state could
+be seen in simulation.  The testbench in this directory does a long
+simulation, long enough to cover the occurance of the trap state.
+
+The trap state was found to be caused by an "ebreak" instruction, which
+in turn was inside a low-level "write" function, and could be backed out
+to a call to "fputs".  The solution was to write a custom "fputs" routine
+to replace the stdio version.
+
+The current hex file in this directory is working.  The hex and lst files
+can be regenerated and programmed to the ravenna development board by:
+
+   cd ~/src/tensorflow
+   make -f tensorflow/lite/micro/tools/make/Makefile TARGET=ravenna hello_world_bin
+   cd ~/src/tensorflow/tensorflow/lite/micro/tools/make/gen/ravenna_riscv32-mcu/bin/
+   /opt/riscv32imc/bin/riscv32-unknown-elf-objcopy -O verilog hello_world hello_world.hex
+   /opt/riscv32imc/bin/riscv32-unknown-elf-objdump -D hello_world > hello_world.lst
+   sudo python3 ~/gits/ravenna/test/ravenna_hkspi.py hello_world.hex
+
+NOTE:  The sampling routine is finicky with respect to some timing issue and
+the routine usually needs to be tweaked a bit to get it to be long-term
+stable.  The current version is not stable and the sampling stops after a
+short while.  This is only a proof-of-concept test.
