@@ -9,7 +9,8 @@
 #include "custom_ops.S"
 
 .section .text
-.global irq
+.global reset_vec
+.type reset_vec, %function
 
 reset_vec:
 	j start
@@ -65,8 +66,8 @@ irq_vec:
         // arg1 = interrupt type
         addi a1, tp, 0
 
-        // call to C function
-        jal ra, irq
+        // call to IRQ callback function
+        // jal ra, irq_callback
 
         /* restore registers */
 
